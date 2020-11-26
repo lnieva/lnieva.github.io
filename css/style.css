@@ -19,6 +19,8 @@
 }
 
 
+/*--------------------------------------------------------------------------------------*/
+
 
 * {
     margin: 0;
@@ -33,7 +35,9 @@ body {
     min-width: 360px;
 }
 
-/*normalizadores*/
+/*--------------------------------------------------------------------------------------*/
+/*------------------------------------MENU----------------------------------------------*/
+/*--------------------------------------------------------------------------------------*/
 
 header {
     /* width: 100%; */
@@ -76,7 +80,7 @@ header nav .menu ul li a {
     position: relative;
     font-family: 'IBM_Plex_Mono', monospace;
     text-decoration: none;
-    color: #000;
+    color: #fff;
     padding: 16px 5%;
     line-height: 28px;
     display: block;
@@ -208,7 +212,7 @@ button:hover {
     margin-top: 24px;
 }
 
-#fondo{
+#bg{
     position: relative;
     height: 1253.5px;
     width: 100%;
@@ -241,7 +245,7 @@ button:hover {
     align-items: center;
 }
 
-iframe {
+.spotify {
     width: 100%;
     padding: 0 11px;
     height: 245px;
@@ -259,6 +263,11 @@ iframe {
     flex-direction: column;
     justify-content: center;
     top: -80px;
+}
+
+#image-1-container {
+    display: flex;
+    justify-content: center;
 }
 
 #image1 {
@@ -346,7 +355,7 @@ iframe {
     align-items: center;
 }
 
-.icons-contenedor {
+.icons-container {
     display: flex;
     flex-direction: column;
 }
@@ -373,7 +382,7 @@ iframe {
     top: -80px;
 }
 
-#fondo-2{
+#bg-2{
     position: relative;
     height: 341px;
     background-image: linear-gradient(225deg, #0000FF 0%, #0000A3 100%);
@@ -433,7 +442,17 @@ footer div p {
 }
 
 
+
+
+
+
+
 /*----------------------------------------------------------------------------------*/
+
+
+
+
+
 
 
 @media screen and (min-width: 1000px){
@@ -501,13 +520,6 @@ footer div p {
     /*--------------------------TITULO------------------------------------------------------*/
     /*--------------------------------------------------------------------------------------*/
 
-    #content {
-    }
-
-    main div {
-        
-    }
-
     .title-1 {
         width: 100%;
         height: 84px;
@@ -532,7 +544,7 @@ footer div p {
         line-height: 24px;
     }
 
-    main div button {
+    button {
         width: 266px;
         height: 56px;
     }
@@ -548,7 +560,7 @@ footer div p {
     /*---------------------------EPISODIOS-----------------------------------------------------*/
     /*-----------------------------------------------------------------------------------------*/
 
-    #fondo {
+    #bg {
         clip-path: polygon(0 15%, 100% 0, 100% 85%, 0% 100%);
         height: 1042px;
     }
@@ -568,21 +580,23 @@ footer div p {
     #title-2 {
         position: relative;
         margin: unset;
-        left: 13.889vw;
+        left: 10px;
         top: -10px;
+        left: 13.889vw;
         font-size: 48px;
         height: 62px;
+        width: 100%;
     }
 
     #episode-iframe {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        width: 1300px;
+        width: 90.27vw;
     }
 
-    iframe {
-        width: 584px;
+    .spotify {
+        width: 40.55555555555556vw;
         padding: 0 11px;
         height: 232px;
         margin: 42px 20px;
@@ -605,7 +619,7 @@ footer div p {
         height: 660px;
     }
 
-    #nosotros-contenedor {
+    #nosotros-container {
         position: relative;
         display: flex;
         flex-direction: column;
@@ -639,7 +653,7 @@ footer div p {
         top: -80px;
     }
 
-    #images-contenedor {
+    #images-container {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
@@ -667,7 +681,7 @@ footer div p {
 
 
     #topicos {
-        top: -20px;
+        top: 0;
     }
 
     #title-topicos {
@@ -675,10 +689,15 @@ footer div p {
         left: 13.889vw;
         font-size: 48px;
         width: 586px;
+        bottom: 63px;
     }
 
     .icons {
+        position: relative;
         flex-direction: row;
+        justify-content: space-around;
+        width: 75%;
+        left: 12.5vw;
     }
 
     .icons span {
@@ -700,7 +719,7 @@ footer div p {
         height: 518px;
     }
 
-    #fondo-2{
+    #bg-2{
         clip-path: polygon(0 35%, 100% 0, 100% 100%, 0% 100%);
         height: 100%;
     }
@@ -757,14 +776,15 @@ footer div p {
     }
 
     #icons-2{
+        justify-content: space-between;
         align-items: flex-end;
         width: 269px;
-        margin-right: 100px;
+        margin: 0 100px 30px 0;
     }
 
     #icons-2 i {
-        width: 18px;
-        height: 28px;
+        font-size: 20px;
+        margin: unset;
     }
 
 }
