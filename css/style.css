@@ -1,21 +1,21 @@
 @font-face {
   font-family: "IBM_Plex_Sans";
-  src: url(../fuentes/IBM_Plex_Sans/IBMPlexSans-Light.ttf) ;
+  src: url(fuentes/IBM_Plex_Sans/IBMPlexSans-Light.ttf) ;
 }
 
 @font-face {
     font-family: "IBM_Plex_Sans_SemiBold";
-    src: url(../fuentes/IBM_Plex_Sans/IBMPlexSans-SemiBold.ttf) ;
+    src: url(fuentes/IBM_Plex_Sans/IBMPlexSans-SemiBold.ttf) ;
   }
 
 @font-face {
     font-family: "IBM_Plex_Mono";
-    src: url(../fuentes/IBM_Plex_Mono/IBMPlexMono-Regular.ttf) ;
+    src: url(fuentes/IBM_Plex_Mono/IBMPlexMono-Regular.ttf) ;
 }
 
 @font-face {
     font-family: "IBM_Plex_Mono_Medium";
-    src: url(../fuentes/IBM_Plex_Mono/IBMPlexMono-Medium.ttf) ;
+    src: url(fuentes/IBM_Plex_Mono/IBMPlexMono-Medium.ttf) ;
 }
 
 
@@ -194,9 +194,10 @@ button {
     line-height: 22px;
     width: 90vw;
     height: 48px;
+    outline: none;
 }
 
-button:hover:active {
+button:hover, button:active {
     background-image: linear-gradient(to right,#00F0B8, #0000FE);
     color: #fff;
 }
