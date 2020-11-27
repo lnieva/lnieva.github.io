@@ -72,7 +72,7 @@ header nav .menu  ul li {
     position: relative;
 }
 
-header nav .menu  ul li:hover {
+header nav .menu  ul li:hover:active {
     background-image: linear-gradient(to right,#00F0B8, #0000FE);
 }
 
