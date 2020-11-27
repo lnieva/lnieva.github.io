@@ -196,7 +196,7 @@ button {
     height: 48px;
 }
 
-button:hover {
+button:hover , button:active{
     background-image: linear-gradient(to right,#00F0B8, #0000FE);
     color: #fff;
 }
