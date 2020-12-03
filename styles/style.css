@@ -425,10 +425,6 @@ footer div p {
 
 @media screen and (min-width: 1000px){
 
-    body {
-        min-width: 360px;
-    }
-
     /*--------------------------MENU ---------------------------------------------------*/
 
     header {
@@ -460,6 +456,15 @@ footer div p {
         color:#00F3BB;
     }
 
+    header nav .menu ul li:hover:active {
+        background: unset;
+        color: #979797;
+    }
+
+    .menu a {
+        display: block;
+    }
+
     header nav .menu ul li a {
         padding: unset;
         line-height: unset;
@@ -481,6 +486,8 @@ footer div p {
     header nav .menu span {
         display: none;
     }
+
+    
 
     /*--------------------------TITULO------------------------------------------------------*/
 
@@ -518,6 +525,10 @@ footer div p {
         left: 13.889vw;
     }
 
+    button:hover {
+        background-image: linear-gradient(to right,#00F0B8, #0000FE);
+        color: #fff;
+    }
 
     /*---------------------------EPISODIOS-----------------------------------------------------*/
 
