@@ -58,7 +58,7 @@ footer div p,  #text-1, #text-2, #text-1-full  {
 }
 
 body {
-    min-width: 360px;
+    min-width: 300px;
 }
 
 /*------------------------------------MENU----------------------------------------------*/
@@ -79,7 +79,7 @@ header nav {
     float: right;
 }
 
-header nav .menu ul {
+.list-check {
     width: 100%;
     position: absolute;
     top: 45px;
@@ -90,38 +90,39 @@ header nav .menu ul {
     height: 0px;
 }
 
-header nav .menu  ul li {
+.list-check li {
     position: relative;
 }
 
-header nav .menu  ul li:hover:active {
+.list-check li:hover:active {
     background-image: linear-gradient(to right,#00F0B8, #0000FE);
 }
 
-header nav .menu ul li a {
+.list-check li a {
+    display: block;
     position: relative;
     font-family: 'IBM_Plex_Mono', monospace;
     text-decoration: none;
     color: #fff;
     padding: 16px 5%;
     line-height: 28px;
-    display: block;
-}
-
-header nav .menu  ul li a:hover {
-    color: #fff;
+    
 }
 
 #checkbox:checked ~ .list-check {
     height: 240px;
-    display: block;
 }
 
-header nav .menu {
+#checkbox:checked + header {
+    position: relative;
+    height: 500px;
+}
+
+.menu {
     padding-top: 3px;
 }
 
-header nav .menu input {
+#checkbox {
     display: block;
     width: 40px;
     height: 32px;
@@ -130,7 +131,7 @@ header nav .menu input {
     position: absolute;
 }
 
-header nav .menu span {
+.span {
     display: block;
     width: 25px;
     height: 2.5px;
@@ -141,31 +142,37 @@ header nav .menu span {
     transform-origin: 3px 0px;
 }
 
-header nav .menu span:first-child {
+.span:first-child {
     transform-origin: 0% 0%;
 }
 
-header nav .menu span:nth-last-child(2) {
+.span:nth-last-child(2) {
     transform-origin: 0% 100%;
 }
 
-header nav .menu input:checked ~ span {
+#checkbox:checked ~ span {
     opacity: 1;
     transform: rotate(45deg) translate(2px, 1px);
 }
 
-header nav .menu input:checked ~ span:nth-last-child(3) {
+#checkbox:checked ~ span:nth-last-child(3) {
     opacity: 0;
     transform: rotate(0deg) scale(0.2, 0.2);
 }
 
-header nav .menu input:checked ~ span:nth-last-child(2) {
+#checkbox:checked ~ span:nth-last-child(2) {
     transform: rotate(-45deg) translate(1px, 0px);
+}
+
+#down {
+    background-color: brown;
+    height: 500px;
 }
 
 /*--------------------------TITULO------------------------------------------------------*/
 
 #content {
+    display: block;
     margin-top: 45px;
 }
 
@@ -313,8 +320,7 @@ button:hover:active {
 
 .images2 {
     min-width: 300px;
-    width: 100vw;
-    /* height: 33.75vh; */
+    max-width: 33.33vw;
     height: auto;
 }
 
