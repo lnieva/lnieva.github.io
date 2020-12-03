@@ -114,6 +114,7 @@ header nav .menu  ul li a:hover {
 
 #checkbox:checked ~ .list-check {
     height: 240px;
+    display: block;
 }
 
 header nav .menu {
@@ -169,7 +170,7 @@ header nav .menu input:checked ~ span:nth-last-child(2) {
 }
 
 .title-1 {
-    margin: 0 16px;
+    margin: 0 16px 0 4.44vw;
     width: 230px;
     font-weight: bold;
 }
@@ -179,7 +180,7 @@ header nav .menu input:checked ~ span:nth-last-child(2) {
 }
 
 #text-1 {
-    margin: 16px 16px;
+    margin: 16px 16px 16px 4.44vw;
 }
 
 #text-1-full {
@@ -219,7 +220,10 @@ button:hover:active {
     width: 100%;
     background-image: linear-gradient(225deg, #0000FF 0%, #0000A3 100%);
     /* transform: skewY(-6deg); */
-    clip-path: polygon(0 3%, 100% 0, 100% 97%, 0% 100%);
+    clip-path:  -webkit-polygon(0 3%, 100% 0, 100% 97%, 0% 100%);
+    clip-path:  -moz-polygon(0 3%, 100% 0, 100% 97%, 0% 100%);
+    clip-path:  -o-polygon(0 3%, 100% 0, 100% 97%, 0% 100%);
+    clip-path:  polygon(0 3%, 100% 0, 100% 97%, 0% 100%);
 }
 
 #episode {
@@ -231,7 +235,7 @@ button:hover:active {
 #title-2 {
     display: flex;
     flex-direction: flex-start;
-    margin: 64px 16px 24px 16px;
+    margin: 64px 16px 24px 4.44vw;
     color: #fff;
 }
 
@@ -271,7 +275,7 @@ button:hover:active {
 }
 
 #title-3 {
-    margin: 27px 16px 0 16px;
+    margin: 27px 16px 0 4.44vw;
     width: 288px;
     font-weight: bold;
 }
@@ -281,7 +285,7 @@ button:hover:active {
     color: #060A24;
     letter-spacing: 0;
     line-height: 22px;
-    margin: 8px 16px;
+    margin: 8px 16px 8px 4.44vw;
 }
 
 /*--------------------------ENTREVISTAS---------------------------------------------*/
@@ -294,21 +298,24 @@ button:hover:active {
 }
 
 #title-4 {
-    margin: 27px 16px 14px 16px;
+    margin: 27px 16px 14px 4.44vw;
     width: 288px;
     font-weight: bold;
 }
 
 #images-container {
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column; */
+    flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
 }
 
 .images2 {
-    min-width: 360px;
-    max-width: 34.58vw;
-    height: 33.75vh;
+    min-width: 300px;
+    width: 100vw;
+    /* height: 33.75vh; */
+    height: auto;
 }
 
 /*-----------------------------TOPICOS------------------------------------------------*/
@@ -323,7 +330,7 @@ button:hover:active {
 
 #title-topicos {
     width: 288px;
-    margin: 48px 16px 24px 16px;
+    margin: 48px 16px 24px 4.44vw;
     font-weight: bold;
 }
 
@@ -447,7 +454,7 @@ footer div p {
     }
 
     header nav .menu  ul li {
-        padding: 5px 10px;
+        padding: 5px 1.94vw;
         display: inline-block;
     }
 
@@ -533,7 +540,10 @@ footer div p {
     /*---------------------------EPISODIOS-----------------------------------------------------*/
 
     #bg {
-        clip-path: polygon(0 15%, 100% 0, 100% 85%, 0% 100%);
+        clip-path:  -webkit-polygon(0 15%, 100% 0, 100% 85%, 0% 100%);
+        clip-path:  -moz-polygon(0 15%, 100% 0, 100% 85%, 0% 100%);
+        clip-path:  -o-polygon(0 15%, 100% 0, 100% 85%, 0% 100%);
+        clip-path:  polygon(0 15%, 100% 0, 100% 85%, 0% 100%);
         height: 1042px;
     }
 
@@ -600,7 +610,7 @@ footer div p {
     #title-3 {
         margin: unset;
         font-size: 48px;
-        width: 399px;
+        width: 430px;
         height: 62px;
     }
 
