@@ -568,19 +568,12 @@ footer div p {
     }
 
     .spotify {
-        width: 40.55555555555556vw;
+        max-width: 40.55555555555556vw;
         padding: 0 11px;
         height: 232px;
         margin: 42px 20px;
     }
     
-    .spotify {
-        width: 40.55555555555556vw;
-        padding: 0 11px;
-        height: 232px;
-        margin: 42px 20px;
-    }
-
     /*---------------------NOSOTROS-----------------------------------------------------*/
 
     #nosotros {
@@ -644,7 +637,8 @@ footer div p {
 
     .images2 {
         width: 33vw;
-        height: 45vh;
+        /* height: 45vh; */
+        height: auto;
     }
 
     /*-----------------------------TOPICOS------------------------------------------------*/
