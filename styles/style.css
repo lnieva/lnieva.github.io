@@ -470,11 +470,9 @@ header nav .menu ul li a {
 #createImg {
     position:relative;
     display:flex;
-    /* top: 87px; */
     overflow-x: scroll;
     scroll-snap-type: x mandatory;
     width: 80vw;
-    /* overflow: hidden; */
 }
 
 .square {
@@ -635,7 +633,35 @@ header nav .menu ul li a {
         display: none;
     }
 
+    /* ----------------------------------- MISGIFOS --------------------------------------------- */
+
+    #title1 {
+        font-size: 35px;
+        line-height: 50px;
+        height: 100px;
+        width: 600px;
+    }
+
+    #friend {
+        width: 399px;
+        height: 190px;
+    }
+
+    #searchmenu {
+        width: 551px;
+        height: 50px;
+    }
+
     /* ----------------------------- CONTAINER1 --------------------------------- */
+
+    #title2 h2 {
+        font-size: 18px;
+        line-height: 25px;
+    }
+
+    #setinput{
+        font-size: 16px;
+    }
 
     .square_gif {
         width: 260px;

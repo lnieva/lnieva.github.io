@@ -1,5 +1,101 @@
 @media screen and (min-width: 1000px){
 
+    /*--------------------------MENU ---------------------------------------------------*/
+
+    header {
+        margin-left: 10px;
+        padding: 20px 5%;
+    }
+
+    header img {
+        width: 36px;
+        height: 36px;
+    }
+
+    header nav .menu ul {
+        position: relative;
+        top: 0;
+        right: 0;
+        overflow: hidden;
+        background: unset;
+        height: unset;
+    }
+
+    #button-create, #button-create-home {
+        display: block;
+        position: relative;
+        background-repeat: no-repeat;
+        right: 2px;
+        margin: 0;
+        padding: 0;
+        width: 54px;
+        height: 54px;
+    }
+
+    #button-create-home {
+        background-image: url('/images/CTA-crear-gifo-active.svg');
+    }
+
+    #button-create {
+        background-image: url('/images/button-crear-gifo.svg');
+    }
+
+    #button-create:hover {
+        background-image: url('/images/CTA-crear-gifo-hover.svg');
+    }
+
+    #button-create:active {
+        background-image: url('/images/CTA-crear-gifo-active.svg');
+    }
+
+    .list-check {
+        display: flex;
+        justify-content: center;
+        margin: 0;
+        padding: 0;
+    } 
+
+    header nav .menu  ul li {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin: 0;
+        padding: 0;
+    }
+
+    .menu {
+        padding-top: 36px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 500px;
+    }
+
+    header nav .menu ul li a {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: bold;
+        font-size: 13px;
+        color: #572EE5;
+        width: 130px;
+        top:0px;
+        right: 10px;
+    }
+
+    .line {
+        display: none;
+    }
+
+    header nav .menu span {
+        display: none;
+    }
+
+    .displaynone, .displayblock {
+        display: none;
+    }
+
+
+    /*--------------------------------------------------------------------*/
+
     #container-image-camara {
         display: flex;
         align-items: center;
@@ -69,7 +165,7 @@
     }
 
     #box-button {
-        top: 95%
+        top: 85%
     }
 
     #box-1, #box-2, #box-3, #box-4 {
@@ -100,6 +196,31 @@
     #box-4 {
         border-bottom: 1px solid #50E3C2;
         border-right: 1px solid #50E3C2;
+    }
+
+    #title-crear {
+        top: 30%;
+        position: absolute;
+        width: 100%;
+    }
+
+    #title-crear-h2 {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: bold;
+        font-size: 25px;
+        color: #572EE5;
+        text-align: center;
+        line-height: 35px;
+        margin: 0;
+    }
+
+    #title-crear p {
+        font-family: 'Roboto', sans-serif;
+        font-size: 16px;
+        color: #000000;
+        text-align: center;
+        line-height: 29px;
+        margin: 14px 0;
     }
 
 }
