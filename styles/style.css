@@ -45,7 +45,6 @@ header nav {
 }
 
 header nav .menu  ul li {
-    /* position: relative; */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -423,7 +422,7 @@ header nav .menu ul li a {
     border-radius: 3px;
 }
 
-/* ----- GIFOS ----- */
+/* --------------------------------- GIFOS ------------------------------------------ */
 
 #gifos {
     display: flex;
@@ -494,7 +493,7 @@ header nav .menu ul li a {
 
 
 
-/* ----- FOOTER ----- */
+/* --------------------------------- FOOTER -------------------------------------- */
 
 #footer {
     position: relative;
@@ -535,9 +534,11 @@ header nav .menu ul li a {
     top: 97.8px;
 }
 
+.links i:hover {
+    color: #572EE5;
+}
 
-
-/* --------------------------------- DESKTOP ----------------------------------------------*/
+/* --------------------------------------------------- DESKTOP --------------------------------------------------------------*/
 
 @media screen and (min-width: 1000px){
 
@@ -562,14 +563,31 @@ header nav .menu ul li a {
         height: unset;
     }
 
-    #button-create {
+    #button-create, #button-create-home {
         display: block;
         position: relative;
+        background-repeat: no-repeat;
         right: 2px;
         margin: 0;
         padding: 0;
         width: 54px;
         height: 54px;
+    }
+
+    #button-create-home {
+        background-image: url('/images/CTA-crear-gifo-active.svg');
+    }
+
+    #button-create {
+        background-image: url('/images/button-crear-gifo.svg');
+    }
+
+    #button-create:hover {
+        background-image: url('/images/CTA-crear-gifo-hover.svg');
+    }
+
+    #button-create:active {
+        background-image: url('/images/CTA-crear-gifo-active.svg');
     }
 
     .list-check {
@@ -587,10 +605,6 @@ header nav .menu ul li a {
         padding: 0;
     }
 
-    header nav .menu  ul li {
-        display: inline-block;
-    }
-
     .menu {
         padding-top: 36px;
         display: flex;
@@ -598,10 +612,6 @@ header nav .menu ul li a {
         align-items: center;
         width: 500px;
     }
-
-    .menu a {
-        display: block;
-    }   
 
     header nav .menu ul li a {
         font-family: 'Montserrat', sans-serif;
@@ -687,7 +697,6 @@ header nav .menu ul li a {
         right: 40px;
     }
 
-
     /* -------------------------------- GIFOS ------------------------------------- */
 
     #createImg {
@@ -716,5 +725,51 @@ header nav .menu ul li a {
     #slider-right:hover {
         background-image: url("../images/Button-Slider-right-hover.svg");
     }
+
+    /* --------------------------------- FOOTER -------------------------------------- */
+
+    #footer {
+        position: relative;
+        flex-direction:row;
+        align-items: center;
+        top: 145px;
+        height: 121px;
+    }
+
+    #container-compartir-href {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        width:80%;
+        left: 10vw;
+    }
+
+    #compartir {
+        font-family: 'Roboto', sans-serif;
+        font-size: 15px;
+        color: #000000;
+        letter-spacing: 0;
+        position: relative;
+        margin-right: 30px;
+        top:0px;
+    }
+
+    #icons a{
+        text-decoration:none;
+        margin: 0 19px 0 3px;
+        width: 18px;
+        height: 18px;
+        color: #CDD6E0;
+        position: relative;
+        top: 0px
+    }
+
+    #reserved {
+        font-size: 13px;
+        top: 0px;
+        width: 200px;
+        right: 158px;
+    }
+
 
 }

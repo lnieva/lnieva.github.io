@@ -1,0 +1,48 @@
+@media screen and (min-width: 1000px){
+
+    #container-image-camara {
+        display: flex;
+        align-items: center;
+        width: 100%;
+    }
+
+    #camara-image {
+        position: relative;
+        display: flex;
+        justify-content:flex-end;
+        align-items: center;
+        height: 390px;
+        top: 0;
+    }
+
+    #camara {
+        width: 123px;
+        height: 162px;
+    }
+
+    #element-luz-camara {
+        position: relative;
+        width: 91px;
+        height: 151px;
+        top: 2px;
+    }
+
+    #create-image {
+        display: flex;
+        justify-content: center;
+        position: relative;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        top: 14px;
+        left: -9%;
+
+    }
+
+    #square-create-gif {
+        border: 1px solid #572EE5;
+        width: 688px;
+        height: 390px;
+    }
+
+}

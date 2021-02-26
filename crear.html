@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="https://sc.acamica.com/icons/1j7w9h/favicon-32x32.png" sizes="32x32">
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -9,12 +10,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/style-create-gif.css">
     <title>Gifos - Acamica</title>
 </head>
 <body>
     <div id="line"></div>
     <header>
-        <img src="./images/logo-desktop.svg" alt="logo" class="logo"/>
+        <a href="./index.html">
+            <img src="./images/logo-desktop.svg" alt="logo" class="logo"/>
+        </a>
         <nav>
             <div class="menu">
                 <input type="checkbox" id="checkbox" />
@@ -34,63 +38,26 @@
                         <div class="line"></div>
                     </li>
                 </ul>
-                <a href="./crear.html">
-                    <div id="button-create"></div>
+                <a href="./index.html">
+                    <div id="button-create-home"></div>
                 </a>
             </div>
         </nav>
     </header>
     <section>
-        <div id="misgifos">
-            <h2 id="title1">Inspírate, busca, guarda, y crea los mejores <span id="span1">GIFOS</span></h2>
-        </div>
-        <div id="search">
-            <img src="./images/ilustra_header.svg" alt="friend" id="friend" for="intro">
-            <div id="searchmenu">
-                <label for="intro"></label>
-                <input class="input" type="text" placeholder="Busca GIFOS y más" name="intro1" id="intro" value="">
-                <a href="#without-result">
-                    <img src="./icons/icon-search.svg" alt="icon-search" id="icon-search">
-                    <img src="./images/close.svg" alt="close-search" id="close-search">
-                </a>
-            </div>
-            <div id="change"></div>
-        </div>
-    </section>
-    <section id="container1">
-        <div id="title2">
-            <h2>Trending:</h2>
-        </div>
-        <div id="title3"></div>
-        <div id="without-result" class="display">
-            <div id="line-result" class="display"></div>
-            <p id="title-search" class="display"></p>
-            <img src="./icons/icon-busqueda-sin-resultado.svg" alt="icon-busqueda-sin-resultado" id="icon-without-result" class="display">
-            <p id="another-search" class="display">Intenta con otra búsqueda.</p>
-        </div>
-        <div id="linea-search-ok" class="display"></div>
-        <h2 id="title-search-ok" class="display"></h2>
-        <div id="result-search">
-        </div>
-    </section>
-    <section id="gifos">
-        <div id="container2">
-            <h1 id="title4">Trending GIFOS</h1>
-            <p class="utimategifos">
-                Mira los últimos<br>
-                GIFOS de nuestra comunidad.
-            </p>
-        </div>
-        <div id="container-gif">
-            <div class="container-slider">
-                <div id="slider-left"></div>
-            </div>
-            <div id="createImg"></div>
-            <div class="container-slider">
-                <div id="slider-right"></div>
+        <div id="container-image-camara">  
+            <div id="create-image">
+                <div id="camara-image">
+                    <img src="./images/camara.svg" alt="camara" id="camara">
+                    <img src="./images/element-luz-camara.svg" alt="element-luz-camara" id="element-luz-camara">
+                </div>
+                <div id="square-create-gif"></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
             </div>
         </div>
-        
     </section>
     <footer id="footer">
         <div id="container-compartir-href">
@@ -110,11 +77,6 @@
         </div>
         <p id="reserved">© GIFOS 2020 All Rights Reserved.</p>
     </footer>
-    <br/>
-    <script src="./js/main.js"></script>
-    <!-- <script src="./js/prueba.js"></script> -->
-    <script src="./js/search.js"></script>
-    <script src="./js/autocomplete.js"></script>
-    <script src="./js/trending-gif.js"></script>
+    <script src="./js/redirect.js"></script>
 </body>
 </html>
