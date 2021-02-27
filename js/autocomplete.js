@@ -4,6 +4,10 @@ const form_Search = document.querySelector('.form_Search')
 const input_Search = document.querySelector('.form_Search > input')
 const button_Search = document.querySelector('#icon-search')
 const search_Autocomplete = document.querySelector('.searchAutocomplete')
+const searchmenu__height = document.querySelector('.searchmenu')
+let cuenta = 1
+
+console.log(searchmenu__height.style.height)
 
 const searchSuggestions = async term => {
     const response = await fetch(`${autocomplete}q=${term}&api_key=${apiKey}
@@ -11,9 +15,17 @@ const searchSuggestions = async term => {
     const responseJson = await response.json()
     search_Autocomplete.innerHTML = ''
     responseJson.data.slice(0, 5).forEach(suggest => {
-      const item = document.createElement('li')
-      item.textContent = suggest.name
-      search_Autocomplete.appendChild(item)
+        const container_lupa_item = document.createElement('div')
+        container_lupa_item.classList.add('container_lupa_item')
+        const lupa_item = document.createElement('img')
+        lupa_item.src = '../icons/icon-search-2.jpg'
+        const item = document.createElement('li')
+        item.textContent = suggest.name
+        search_Autocomplete.appendChild(container_lupa_item)
+        container_lupa_item.appendChild(lupa_item)
+        container_lupa_item.appendChild(item)
+        //document.querySelector('.searchmenu').height
+        cuenta++
     })
   }
   

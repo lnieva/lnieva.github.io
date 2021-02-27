@@ -108,7 +108,7 @@ header nav .menu ul li a {
     display: block;
 }
 
-/* ----- MISGIFOS ----- */
+/* --------------------------------- MISGIFOS -------------------------------------- */
 
 #misgifos {
     position: relative;
@@ -130,7 +130,6 @@ header nav .menu ul li a {
     width: 270px;
     margin: 0;
     z-index: -1;
-    /* padding: 0 30px; */
 }
 
 #span1 {
@@ -182,6 +181,7 @@ header nav .menu ul li a {
     outline: none;
     width: 215px;
     height: 22px;
+    list-style: none;
 }
 
 #icon-search {
@@ -192,10 +192,14 @@ header nav .menu ul li a {
 #close-search {
     display: none;
     position: relative;
-    right: 25px;
+    right: 0;
 }
 
 .searchAutocomplete {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    color: #9CAFC3;
+    text-align: left;
     list-style: none;
 }
 
@@ -665,9 +669,41 @@ header nav .menu ul li a {
 
     #intro {
         position: relative;
-        left: -20px;
+        left: -50px;
         background-color: transparent;
     }
+
+    #icon-search_active {
+        display: none;
+        width: 20px;
+        height: 20px;
+    }
+
+    .container_lupa_item {
+        display: flex;
+        justify-content: space-between;
+        width: 270px;
+        height: 30px;
+    }
+
+    .searchAutocomplete {
+        position: relative;
+        left: -110px;
+        top: 0px;
+    }
+
+    .searchAutocomplete li {
+        width: 210px;
+        height: 22px;
+    }
+
+    .searchAutocomplete img {
+        width: 20px;
+        height: 20px;
+        left: -20px;
+    }
+
+
 
     /* ----------------------------- CONTAINER1 --------------------------------- */
 

@@ -19,11 +19,13 @@ function changeDisplay_search_ok () {
 function icon_search_close () {
     document.getElementById("icon-search").style.display = "none"
     document.getElementById("close-search").style.display = "block"
+    document.getElementById("icon-search_active").style.display = "block"
 }
 
 function icon_search_ok () {
     document.getElementById("icon-search").style.display = "block"
     document.getElementById("close-search").style.display = "none"
+    document.getElementById("icon-search_active").style.display = "none"
 }
 
 
@@ -138,6 +140,10 @@ document.getElementById("icon-search").addEventListener("click", () => {
     search_gifos() 
     })
 
+document.getElementById("icon-search_active").addEventListener("click", () => {
+    search_gifos() 
+    })
+
 // Click en el Close
 document.getElementById("close-search").addEventListener("click", () => {
     icon_search_ok()
@@ -153,11 +159,3 @@ input.addEventListener("keyup", function(event) {
         search_gifos()
 }
 });
-
-
-
-const formSearch = document.querySelector('.searchmenu')
-const inputSearch = document.querySelector('.searchmenu > input')
-const buttonSearch = document.querySelector('icon-search')
-const searchAutocomplete = document.querySelector('.searchAutocomplete')
-
