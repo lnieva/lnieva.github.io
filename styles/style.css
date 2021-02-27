@@ -137,7 +137,13 @@ header nav .menu ul li a {
     color: #50E3C2;
 }
 
-/* SEARCH */
+/* ---------------------------------- SEARCH ------------------------------------- */
+
+#container_misgifos {
+    position: relative;
+    height: auto;
+    z-index: -1;
+}
 
 #search {
     display: flex;
@@ -146,6 +152,7 @@ header nav .menu ul li a {
     position: relative;
     top: 71px;
     z-index: -1;
+    height: 100%;
 }
 
 #friend {
@@ -153,7 +160,7 @@ header nav .menu ul li a {
     height: 130px;
 }
 
-#searchmenu {
+.searchmenu {
     display: flex;
     align-items: center;
     justify-content:space-around;
@@ -179,7 +186,7 @@ header nav .menu ul li a {
 
 #icon-search {
     position: relative;
-    right: 20px;
+    right: 0;
 }
 
 #close-search {
@@ -188,7 +195,11 @@ header nav .menu ul li a {
     right: 25px;
 }
 
-/* ----- CONTAINER1 ----- */
+.searchAutocomplete {
+    list-style: none;
+}
+
+/* ------------------------------------ CONTAINER1 ------------------------------------------ */
 
 #container1 {
     position: relative;
@@ -647,14 +658,15 @@ header nav .menu ul li a {
         height: 190px;
     }
 
-    #searchmenu {
+    .searchmenu {
         width: 551px;
         height: 50px;
     }
 
     #intro {
         position: relative;
-        left: -80px;
+        left: -20px;
+        background-color: transparent;
     }
 
     /* ----------------------------- CONTAINER1 --------------------------------- */

@@ -153,3 +153,11 @@ input.addEventListener("keyup", function(event) {
         search_gifos()
 }
 });
+
+
+
+const formSearch = document.querySelector('.searchmenu')
+const inputSearch = document.querySelector('.searchmenu > input')
+const buttonSearch = document.querySelector('icon-search')
+const searchAutocomplete = document.querySelector('.searchAutocomplete')
+
