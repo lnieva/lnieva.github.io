@@ -148,7 +148,7 @@ document.getElementById("close-search").addEventListener("click", () => {
 // Habilitamos en enter en la busqueda
 var input = document.getElementById("intro");
 input.addEventListener("keyup", function(event) {
-    icon_search_close()
+    //icon_search_close()
     if (event.keyCode === 13) {
         search_gifos()
 }
