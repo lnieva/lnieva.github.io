@@ -652,6 +652,11 @@ header nav .menu ul li a {
         height: 50px;
     }
 
+    #intro {
+        position: relative;
+        left: -80px;
+    }
+
     /* ----------------------------- CONTAINER1 --------------------------------- */
 
     #title2 h2 {
