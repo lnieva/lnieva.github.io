@@ -47,20 +47,25 @@
         <div id="search">
             <img src="./images/ilustra_header.svg" alt="friend" id="friend" for="intro">
             <div class="searchmenu">
-                <a href="#without-result">
-                    <img src="./icons/icon-search-2.jpg" alt="icon-search" id="icon-search_active">
-                </a>
-                <form class='form_Search'>
-                    <label for="intro"></label>
-                    <input class="input" type="text" placeholder="Busca GIFOS y más" name="intro1" id="intro" value="">
-                </form>
-                <a href="#without-result">
-                    <img src="./icons/icon-search.svg" alt="icon-search" id="icon-search">
-                    <img src="./images/close.svg" alt="close-search" id="close-search">
-                </a>
+                <div class="searchmenu__container">
+                    <a href="#without-result">
+                        <img src="./icons/icon-search-2.jpg" alt="icon-search" id="icon-search_active">
+                    </a>
+                    <form class='form_Search'>
+                        <label for="intro"></label>
+                        <input class="input" type="text" placeholder="Busca GIFOS y más" name="intro1" id="intro" value="">
+                    </form>
+                    <a href="#without-result">
+                        <img src="./icons/icon-search.svg" alt="icon-search" id="icon-search">
+                        <img src="./images/close.svg" alt="close-search" id="close-search">
+                    </a>
+                </div>
+                <ul class='searchAutocomplete'></ul>
             </div>
-            <ul class='searchAutocomplete'></ul>
             <div id="change"></div>
+        </div>
+        <div class="fullGif">
+            <img src="./images/close.svg" alt="close" class="fullGif__close">
         </div>
     </section>
     <section id="container1">
@@ -119,8 +124,8 @@
     <br/>
     <script src="./js/main.js"></script>
     <script src="./js/search.js"></script>
-    <script src="./js/trending-title.js"></script>
     <script src="./js/autocomplete.js"></script>
+    <script src="./js/trending-title.js"></script>
     <script src="./js/trending-gif.js"></script>
 </body>
 </html>
