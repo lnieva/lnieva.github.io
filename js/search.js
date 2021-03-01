@@ -112,8 +112,24 @@ function search_gifos () {
             content.classList.add('content')
             const image = document.createElement('img')
             image.src = imageUrl
+            const maximize_user = document.createElement('p')
+            maximize_user.classList.add('maximize_user')
+            if (!user == "") {
+                maximize_user.textContent = `${user}`
+            }else{
+                maximize_user.textContent = "Acamica"
+            }
+            const maximize_title = document.createElement('h3')
+            maximize_title.classList.add('maximize_title')
+            if (!title == "") {
+                maximize_title.textContent = `${title}`
+            }else{
+                maximize_title.textContent = "No Title"
+            }
             content.appendChild(image)
-            fullGif.appendChild(content)
+            content.appendChild(maximize_user)
+            content.appendChild(maximize_title)
+            document.querySelector('.fullGif__close').before(content)
         })
 
         createImg.appendChild(gifCard)

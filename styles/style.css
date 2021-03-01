@@ -248,12 +248,12 @@ header nav .menu ul li a {
 .fullGif .content {
     position: relative;
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    /*align-items: center;*/
     justify-content: center;
     width: 695px;
     height: 385px;
-    border: 1px solid red;
-    top: -70px;
+    top: -30px;
 }
 
 .fullGif .content img {
@@ -263,10 +263,26 @@ header nav .menu ul li a {
 
 .fullGif__close {
     position: relative;
-    left: 350px;
+    left: 96px;
     top: -35%;
     width: 15.8px;
     height: 15.8px;
+    z-index: 2;
+}
+
+.maximize_user {
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    color: #000000;
+    text-align: left;
+}
+
+.maximize_title {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    color: #000000;
+    text-align: left;
+    margin: 0;
 }
 
 /* ------------------------------------ CONTAINER1 ------------------------------------------ */
