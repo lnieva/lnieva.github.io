@@ -385,11 +385,11 @@ header nav .menu ul li a {
     position: relative;
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
-    font-size: 35px;
+    font-size: 25px;
     color: #572EE5;
     text-align: center;
-    line-height: 30px;
-    width: 550px;
+    line-height: 40px;
+    width: 250px;
     height: 30px;
     margin-top: 20px;
 }
@@ -822,6 +822,14 @@ header nav .menu ul li a {
     #title2 h2 {
         font-size: 18px;
         line-height: 25px;
+    }
+
+    #title-search-ok {
+        font-size: 55px;
+        line-height: 30px;
+        width: 550px;
+        height: 30px;
+        margin-top: 20px;
     }
 
     #setinput{
