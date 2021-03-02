@@ -239,6 +239,7 @@ header nav .menu ul li a {
 
 .show {
     display: flex;
+    justify-content: center;
 }
 
 .fullGif .content {
@@ -249,7 +250,7 @@ header nav .menu ul li a {
     width: 318px;
     height: 245px;
     top: -30px;
-    left: 5%;
+    /* left: 5%; */
 }
 
 .maximize_img {
