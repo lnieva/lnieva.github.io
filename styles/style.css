@@ -252,6 +252,7 @@ header nav .menu ul li a {
     width: 250px;
     height: 100px;
     top: -30px;
+    left: -10px;
 }
 
 .maximize_img {
