@@ -605,7 +605,7 @@ header nav .menu ul li a {
     display:flex;
     overflow-x: scroll;
     scroll-snap-type: x mandatory;
-    width: 80vw;
+    width: 60vw;
     z-index: -1;
 }
 

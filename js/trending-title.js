@@ -21,4 +21,5 @@ function updateValue(val, event) {
     document.getElementById("intro").value = val;
     event.preventDefault();
     search_gifos()
+    icon_search_close()
 }

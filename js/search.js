@@ -4,61 +4,6 @@ const searchGif = `https://api.giphy.com/v1/gifs/search?api_key=${apiKey}&q=`
 const search_Autocomplete__lupa_item = document.querySelector('.searchAutocomplete')
 const fullGif = document.querySelector('.fullGif')
 
-// Remueve los gif
-function removeAll () {
-    let remove = document.getElementById("result-search")
-    while (remove.firstChild) {
-        remove.removeChild(remove.lastChild)
-    }
-}
-
-// Trabajo de display en Lupa y Close
-function changeDisplay_search_ok () {
-    document.getElementById("linea-search-ok").style.display = "none"
-    document.getElementById("title-search-ok").style.display = "none"
-}
-
-function icon_search_close () {
-    document.getElementById("icon-search").style.display = "none"
-    document.getElementById("close-search").style.display = "block"
-    document.getElementById("icon-search_active").style.display = "block"
-}
-
-function icon_search_ok () {
-    document.getElementById("icon-search").style.display = "block"
-    document.getElementById("close-search").style.display = "none"
-    document.getElementById("icon-search_active").style.display = "none"
-}
-
-// Verifica si no esta vacio el usuario y el titlo del Gif
-function user_title_test (user_test, title_test, user_var, title_var) {
-    if (!user_test == "") {
-        user_var.textContent = `${user_test}`
-    }else{
-        user_var.textContent = "Acamica"
-    }
-    if (!title_test == "") {
-        title_var.textContent = `${title_test}`
-    }else{
-        title_var.textContent = "No Title"
-    }
-}
-
-// Hover user, title, favoritos, download y maximizar
-function hover_user_title_fav_down_max (gifCardAll) {
-    
-}
-
-// Click download Gif
-async function download_gif (url_gif, title_gif) {
-    let a = document.createElement('a');
-    let response = await fetch(url_gif)
-    let file = await response.blob();
-    a.download = title_gif
-    a.href = window.URL.createObjectURL(file);
-    a.click()
-}
-
 // Funcion de Search de Gifos
 function search_gifos () {
 
@@ -107,6 +52,7 @@ function search_gifos () {
         gifUser.setAttribute("id", "gifUser");
         gifTitle.setAttribute("id", "gifTitle");
 
+        // Verifica si esta vacio el usuario y el titulo
         user_title_test(user, title, gifUser, gifTitle)
 
         let favorite = document.createElement('div')
@@ -128,11 +74,6 @@ function search_gifos () {
         gifCard.appendChild(gifImage)
         gifCard.appendChild(cuadro)
 
-        // Descarga el Gif
-        download.addEventListener("click", () => {
-            download_gif(url, title)
-        })
-
         // Maximiza el Gif
         max.addEventListener('click', () => {
             fullGif.classList.add('show')
@@ -146,16 +87,17 @@ function search_gifos () {
             const maximize_title = document.createElement('h3')
             maximize_title.classList.add('maximize_title')
 
+            // Verifica si esta vacio el usuario y el titulo
             user_title_test(user, title, maximize_user, maximize_title)
 
             content.before(maximize_img)
             maximize_user_title.appendChild(maximize_user)
             maximize_user_title.appendChild(maximize_title)
+        })
 
-            document.querySelector('.maximize_icon_download').addEventListener("click", () => {
-                download_gif(url, title)
-            })
-
+        //Download desde el hover
+        download.addEventListener("click", () => {
+            download_gif(url, title)
         })
 
         createImg.appendChild(gifCard)
@@ -214,7 +156,7 @@ document.getElementById("close-search").addEventListener("click", () => {
     }
 })
 
-// Habilitamos en enter en la busqueda
+// Habilitamos la tecla enter en la busqueda
 var input = document.getElementById("intro");
 input.addEventListener("keyup", function(event) {
     //icon_search_close()
@@ -225,11 +167,14 @@ input.addEventListener("keyup", function(event) {
 
 // Cierra las imagenes maximizadas
 const fullGifClose = document.querySelector('.fullGif__close')
-    fullGifClose.addEventListener('click', () => {
-        document.querySelector('.content_img').remove()
-        document.querySelector('.maximize_user').remove()
-        document.querySelector('.maximize_title').remove()
-        fullGif.classList.remove('show')
-        document.querySelector('#gifos').classList.remove('displaynone')
-        //document.querySelector('#footer').classList.remove('displaynone')
-    })
+fullGifClose.addEventListener('click', () => {
+    document.querySelector('.content_img').remove()
+    document.querySelector('.maximize_user').remove()
+    document.querySelector('.maximize_title').remove()
+    fullGif.classList.remove('show')
+    document.querySelector('#gifos').classList.remove('displaynone')
+})
+
+document.querySelector('.maximize_icon_download').addEventListener("click", () => {
+    download_gif(document.querySelector('.content_img').src, document.querySelector('.maximize_title').innerHTML)
+})
