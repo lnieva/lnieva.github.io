@@ -261,8 +261,8 @@ header nav .menu ul li a {
 
 .fullGif__close {
     position: relative;
-    left: 96px;
-    top: -35%;
+    left: 46px;
+    top: -25%;
     width: 15.8px;
     height: 15.8px;
     cursor: pointer;
@@ -290,7 +290,7 @@ header nav .menu ul li a {
     height: 36px;
     border: 1px solid #CED7E1;
     border-radius: 6px;
-    margin-right: 20px;
+    margin-right: 5px;
 }
 
 .maximize_user_title_img {
