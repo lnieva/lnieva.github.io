@@ -8,7 +8,7 @@ const randomGif = `https://api.giphy.com/v1/gifs/random?api_key=${apiKey}&tag=`
 
 // Remueve los gif
 function removeAll () {
-    let remove = document.getElementById("result-search")
+    let remove = document.querySelector(".result-search")
     while (remove.firstChild) {
         remove.removeChild(remove.lastChild)
     }
@@ -106,3 +106,16 @@ async function download_gif (url_gif, title_gif) {
     a.href = window.URL.createObjectURL(file);
     a.click()
 }
+
+//
+function button_view_active () {
+    document.querySelector('.button_view').classList.add('button_view_active')
+    document.querySelector('.button_view__img').classList.add('button_view_active')
+}
+
+function button_view_disable () {
+    document.querySelector('.button_view').classList.remove('button_view_active')
+    document.querySelector('.button_view__img').classList.remove('button_view_active')
+}
+
+button_view_disable()

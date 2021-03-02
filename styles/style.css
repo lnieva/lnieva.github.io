@@ -1,3 +1,12 @@
+.displaynone {
+    display: none;
+}
+
+.displayblock {
+    display: block;
+}
+
+
 body {
     margin: 0;
     padding: 0;
@@ -99,14 +108,6 @@ header nav .menu ul li a {
 #close {
     position: absolute;
     right: 48px;
-}
-
-.displaynone {
-    display: none;
-}
-
-.displayblock {
-    display: block;
 }
 
 /* --------------------------------- MISGIFOS -------------------------------------- */
@@ -258,10 +259,20 @@ header nav .menu ul li a {
     height: 100%;
 }
 
+.fullGif_container_close {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    width: 30px;
+    height: 500px;
+    top: -50px
+}
+
 .fullGif__close {
     position: relative;
-    left: 5px;
-    top: -27%;
+    /* left: 5px;
+    top: -27%; */
     width: 15.8px;
     height: 15.8px;
     cursor: pointer;
@@ -317,6 +328,36 @@ header nav .menu ul li a {
 
 .maximize_icon_fav:hover, .maximize_icon_download:hover {
     border: 2px solid #CED7E1;
+}
+
+.button_view {
+    position: relative;
+    display: none;
+    border: 0;
+    background-color: transparent;
+    width: 100%;
+    height: 100px;
+    top: 40px;
+}
+
+.button_view:focus {
+    outline:0;
+}
+
+
+.button_view__img {
+    display: none;
+}
+
+.button_view__img, .button_view__img_hover, .button_view__img_noct, .button_view__img_noct_hover {
+    display: none;
+    cursor: pointer;
+}
+
+.button_view_active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* ------------------------------------ CONTAINER1 ------------------------------------------ */
@@ -427,7 +468,7 @@ header nav .menu ul li a {
     display: none;
 }
 
-#result-search {
+.result-search {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -929,19 +970,19 @@ header nav .menu ul li a {
         height: 385px;
         top: -30px;
     }
-    
+
     .maximize_img {
         width: 100%;
         height: 100%;
     }
-    
+
     .fullGif__close {
-        left: 96px;
-        top: -35%;
+        /* left: 96px;
+        top: -35%; */
         width: 15.8px;
         height: 15.8px;
     }
-    
+
     .maximize_icon_fav, .maximize_icon_download {
         position: relative;
         width: 36px;

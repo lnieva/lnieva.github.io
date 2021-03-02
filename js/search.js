@@ -18,14 +18,11 @@ function search_gifos () {
             }
     }
 
-    // Remueve los gif
-    removeAll()
-
     // busca los gif y los muestra
     const numbers = []
     let promiseList = []
 
-    for (let i=0; i < 12; i++) {
+    for (let i=0; i < 48; i++) {
         let random = Math.floor(Math.random()*50)
         numbers.push(random)
     }
@@ -34,7 +31,7 @@ function search_gifos () {
         .then(response => response.json())
             promiseList.push(gifPush)
 
-    let createImg = document.getElementById("result-search")
+    let createImg = document.querySelector(".result-search")
     const showGif = (user, title, url) => {
         let gifCard = document.createElement('div')
         let lineSearch = document.getElementById("line-result")
@@ -102,6 +99,8 @@ function search_gifos () {
 
         createImg.appendChild(gifCard)
 
+        button_view_active()
+
     }
 
     Promise.all(promiseList)
@@ -109,7 +108,8 @@ function search_gifos () {
         if(!response[0].data.length == "0" ){
             check_namegif("none")
             if (!response[0].data == ""){
-                numbers.forEach(gif => {
+                const data = numbers.slice(0,12)
+                data.forEach(gif => {
                     const user = response[0].data[gif].username
                     const title = response[0].data[gif].title
                     const url = response[0].data[gif].images.original.url
@@ -119,7 +119,8 @@ function search_gifos () {
         }else{
             numbers.forEach(gif => {
             const url = response[0].data[gif].title
-        }) 
+        })
+        
     }
     })
     .catch( error => {
@@ -137,10 +138,12 @@ function search_gifos () {
 // Click en el lupa
 document.getElementById("icon-search").addEventListener("click", () => {
     icon_search_close()
+    removeAll()
     search_gifos()
 })
 
 document.getElementById("icon-search_active").addEventListener("click", () => {
+    removeAll()
     search_gifos() 
 })
 
@@ -150,6 +153,7 @@ document.getElementById("close-search").addEventListener("click", () => {
     changeDisplay_search_ok()
     search_Autocomplete__lupa_item.innerHTML = ''
     removeAll()
+    button_view_disable()
     let check_error = document.getElementsByClassName("display")
     for (let i=0; i < check_error.length; i++) {
         check_error[i].style.display = "none"
@@ -175,6 +179,12 @@ fullGifClose.addEventListener('click', () => {
     document.querySelector('#gifos').classList.remove('displaynone')
 })
 
+// Click Download Search/trendings
 document.querySelector('.maximize_icon_download').addEventListener("click", () => {
     download_gif(document.querySelector('.content_img').src, document.querySelector('.maximize_title').innerHTML)
+})
+
+
+document.querySelector('.button_view__img').addEventListener("click", () => {
+    search_gifos()
 })

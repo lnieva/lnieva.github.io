@@ -19,7 +19,8 @@ fetch(`${trendingEndpoint}${apiKey}`)
             gifCard.appendChild(box)
 
             hover_user_title_fav_down_max(user, title, imgGif, gifCard)
-        } 
+        }
+
     })
 
 // ------ BOTONES SLIDER ------

@@ -18,12 +18,3 @@ checkburger.addEventListener("click",
 
 });
 
-// ------ BOTONES SLIDER ------
-
-document.querySelector('#slider-right').addEventListener("click", () => {
-    console.log("click")
-    document.querySelector('#createImg').scrollLeft += 200;
-})
-document.querySelector('#slider-left').addEventListener("click", () => {
-     document.querySelector('#createImg').scrollLeft -= 200;
-})
