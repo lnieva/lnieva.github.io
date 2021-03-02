@@ -14,7 +14,7 @@ header {
     height: 45px;
     top: 0;
     padding: 10px 5%;
-    z-index: -1;
+    /* z-index: -1; */
 }
 
 .logo {
@@ -246,10 +246,10 @@ header nav .menu ul li a {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 250px;
-    height: 100px;
+    width: 318px;
+    height: 245px;
     top: -30px;
-    left: 50px;
+    /* left: 50px; */
 }
 
 .maximize_img {
@@ -259,8 +259,8 @@ header nav .menu ul li a {
 
 .fullGif__close {
     position: relative;
-    left: 46px;
-    top: -25%;
+    left: 5px;
+    top: -27%;
     width: 15.8px;
     height: 15.8px;
     cursor: pointer;
@@ -268,8 +268,8 @@ header nav .menu ul li a {
 }
 
 .content_img {
-    width: 250px;
-    height: 145px;
+    width: 318px;
+    height: 245px;
 }
 
 .maximize_user {
