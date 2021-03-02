@@ -267,6 +267,11 @@ header nav .menu ul li a {
     z-index: 2;
 }
 
+.content_img {
+    width: 250px;
+    height: 145px;
+}
+
 .maximize_user {
     font-family: 'Roboto', sans-serif;
     font-size: 15px;
@@ -907,6 +912,11 @@ header nav .menu ul li a {
     }
 
     /*--------------------------------- SEARCH -------------------------------------*/
+
+    .content_img {
+        width: 100%;
+        height: 100%;
+    }
 
     .fullGif {
         justify-content: center;

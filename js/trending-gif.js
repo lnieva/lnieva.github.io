@@ -48,14 +48,10 @@ function hover_user_title_fav_down_max (user, title, url, gifCardAll) {
         })
 
         document.querySelector('#gifos').classList.add('displaynone')
-        //document.querySelector('#footer').classList.add('displaynone')
 
     })
 
-    // Descarga el Gif
-    download.addEventListener("click", () => {
-        download_gif(url, title)
-    })
+    
 }
 
 const trendingEndpoint = "https://api.giphy.com/v1/gifs/trending?api_key="
@@ -76,6 +72,10 @@ fetch(`${trendingEndpoint}${apiKey}`)
             createImg.appendChild(gifCard)
             gifCard.appendChild(box)
 
-            hover_user_title_fav_down_max(user, title, imgGif, gifCard) 
+            hover_user_title_fav_down_max(user, title, imgGif, gifCard)
+            // Descarga el Gif
+            document.querySelector('.download_normal').addEventListener("click", () => {
+                download_gif(url, title)
+            })
         }
     })
