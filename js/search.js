@@ -30,6 +30,30 @@ function icon_search_ok () {
     document.getElementById("icon-search_active").style.display = "none"
 }
 
+// Verifica si no esta vacio el usuario y el titlo del Gif
+function user_title_test (user_test, title_test, user_var, title_var) {
+    if (!user_test == "") {
+        user_var.textContent = `${user_test}`
+    }else{
+        user_var.textContent = "Acamica"
+    }
+    if (!title_test == "") {
+        title_var.textContent = `${title_test}`
+    }else{
+        title_var.textContent = "No Title"
+    }
+}
+
+// Click download Gif
+async function download_gif (url_gif, title_gif) {
+    let a = document.createElement('a');
+    let response = await fetch(url_gif)
+    let file = await response.blob();
+    a.download = title_gif
+    a.href = window.URL.createObjectURL(file);
+    a.click()
+}
+
 // Funcion de Search de Gifos
 function search_gifos () {
 
@@ -77,20 +101,14 @@ function search_gifos () {
         cuadro.setAttribute("id", "cuadro");
         gifUser.setAttribute("id", "gifUser");
         gifTitle.setAttribute("id", "gifTitle");
-        if (!user == "") {
-            gifUser.textContent = `${user}`
-        }else{
-            gifUser.textContent = "Acamica"
-        }
-        if (!title == "") {
-            gifTitle.textContent = `${title}`
-        }else{
-            gifTitle.textContent = "No Title"
-        }
+
+        user_title_test(user, title, gifUser, gifTitle)
+
         let favorite = document.createElement('div')
         favorite.classList.add("favorite_normal")
         let download = document.createElement('div')
         download.classList.add("download_normal")
+
         let max = document.createElement('div')
         max.classList.add("max_normal")
         document.getElementById("linea-search-ok").style.display = "block"
@@ -103,35 +121,13 @@ function search_gifos () {
         gifCard.appendChild(max)
         gifCard.appendChild(gifImage)
         gifCard.appendChild(cuadro)
-        
-        // Maximizar las imagenes
-        // max.addEventListener('click', () => {
-        //     const imageUrl = url
-        //     fullGif.classList.add('show')
-        //     const content = document.createElement('div')
-        //     content.classList.add('content')
-        //     const image = document.createElement('img')
-        //     image.src = imageUrl
-        //     const maximize_user = document.createElement('p')
-        //     maximize_user.classList.add('maximize_user')
-        //     if (!user == "") {
-        //         maximize_user.textContent = `${user}`
-        //     }else{
-        //         maximize_user.textContent = "Acamica"
-        //     }
-        //     const maximize_title = document.createElement('h3')
-        //     maximize_title.classList.add('maximize_title')
-        //     if (!title == "") {
-        //         maximize_title.textContent = `${title}`
-        //     }else{
-        //         maximize_title.textContent = "No Title"
-        //     }
-        //     content.appendChild(image)
-        //     content.appendChild(maximize_user)
-        //     content.appendChild(maximize_title)
-        //     document.querySelector('.fullGif__close').before(content)
-        // })
 
+        // Descarga el Gif
+        download.addEventListener("click", () => {
+            download_gif(url, title)
+        })
+
+        // Maximiza el Gif
         max.addEventListener('click', () => {
             fullGif.classList.add('show')
             const content = document.querySelector('.maximize_user_title_img')
@@ -141,15 +137,19 @@ function search_gifos () {
             const maximize_user_title = document.querySelector('.maximize_user_title')
             const maximize_user = document.createElement('p')
             maximize_user.classList.add('maximize_user')
-            maximize_user.textContent = user
             const maximize_title = document.createElement('h3')
             maximize_title.classList.add('maximize_title')
-            maximize_title.textContent = title
+
+            user_title_test(user, title, maximize_user, maximize_title)
+
             content.before(maximize_img)
             maximize_user_title.appendChild(maximize_user)
             maximize_user_title.appendChild(maximize_title)
-            //document.createElement('maximize_user').textContent = `${user}`
-            //document.createElement('maximize_title').textContent = title
+
+            document.querySelector('.maximize_icon_download').addEventListener("click", () => {
+                download_gif(url, title)
+            })
+
         })
 
         createImg.appendChild(gifCard)

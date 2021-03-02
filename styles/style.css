@@ -312,6 +312,10 @@ header nav .menu ul li a {
     width: 50%;
 }
 
+.maximize_icon_fav:hover, .maximize_icon_download:hover {
+    border: 2px solid #CED7E1;
+}
+
 /* ------------------------------------ CONTAINER1 ------------------------------------------ */
 
 #container1 {
@@ -997,6 +1001,4 @@ header nav .menu ul li a {
         width: 200px;
         right: 158px;
     }
-
-
 }
