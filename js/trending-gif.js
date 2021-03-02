@@ -47,6 +47,9 @@ function hover_user_title_fav_down_max (user, title, url, gifCardAll) {
             download_gif(url, title)
         })
 
+        document.querySelector('#gifos').classList.add('displaynone')
+        //document.querySelector('#footer').classList.add('displaynone')
+
     })
 
     // Descarga el Gif
@@ -73,6 +76,6 @@ fetch(`${trendingEndpoint}${apiKey}`)
             createImg.appendChild(gifCard)
             gifCard.appendChild(box)
 
-            hover_user_title_fav_down_max(user, title, imgGif, gifCard)   
+            hover_user_title_fav_down_max(user, title, imgGif, gifCard) 
         }
     })

@@ -223,11 +223,13 @@ input.addEventListener("keyup", function(event) {
 }
 });
 
-// Close las imagenes maximizadas
+// Cierra las imagenes maximizadas
 const fullGifClose = document.querySelector('.fullGif__close')
     fullGifClose.addEventListener('click', () => {
         document.querySelector('.content_img').remove()
         document.querySelector('.maximize_user').remove()
         document.querySelector('.maximize_title').remove()
         fullGif.classList.remove('show')
+        document.querySelector('#gifos').classList.remove('displaynone')
+        //document.querySelector('#footer').classList.remove('displaynone')
     })

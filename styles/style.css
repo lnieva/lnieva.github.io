@@ -231,13 +231,10 @@ header nav .menu ul li a {
     align-items: center;
     background: white;
     display: none;
-    justify-content: center;
     position: fixed;
     top: 0;
     width: 100%;
     height: 100%;
-    overflow-y: hidden;
-    left: -30px;
 }
 
 .show {
@@ -430,6 +427,8 @@ header nav .menu ul li a {
     justify-content: center;
     position: relative;
     top: 50px;
+    z-index: -1;
+    left: 10px;;
 }
 
 .square_gif {
@@ -444,6 +443,7 @@ header nav .menu ul li a {
 .container_gif {
     position: relative;
     display: inline-block;
+    z-index: -1;
 }
 
 .container_gif:hover #cuadro {
@@ -592,6 +592,7 @@ header nav .menu ul li a {
     position: relative;
     display: flex;
     top: 100px;
+    z-index: -1;
 }
 
 #createImg {
@@ -600,6 +601,7 @@ header nav .menu ul li a {
     overflow-x: scroll;
     scroll-snap-type: x mandatory;
     width: 80vw;
+    z-index: -1;
 }
 
 .square {
@@ -842,10 +844,16 @@ header nav .menu ul li a {
         font-size: 16px;
     }
 
+    /* #result-search {
+        left: -10px;
+    } */
+
     .square_gif {
+        position: relative;
         width: 260px;
         height: 200px;
         margin: 0 29px 29px 0;
+        z-index: -1;
     }
 
     .container_gif:hover #cuadro {
@@ -904,6 +912,11 @@ header nav .menu ul li a {
 
     /*--------------------------------- SEARCH -------------------------------------*/
 
+    .fullGif {
+        justify-content: center;
+        left: -10px;
+    }
+
     .fullGif .content {
         width: 695px;
         height: 385px;
@@ -923,10 +936,12 @@ header nav .menu ul li a {
     }
     
     .maximize_icon_fav, .maximize_icon_download {
+        position: relative;
         width: 36px;
         height: 36px;
         border-radius: 6px;
         margin-right: 20px;
+        z-index: 2;
     }
 
     /* -------------------------------- GIFOS ------------------------------------- */
