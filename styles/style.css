@@ -163,7 +163,6 @@ header nav .menu ul li a {
 .searchmenu {
     position: relative;
     width: 334px;
-    /*height: 54px;*/
     background: #FFFFFF;
     border: 1px solid #572EE5;
     border-radius: 27px;
@@ -184,7 +183,6 @@ header nav .menu ul li a {
     font-size: 16px;
     color: #000000;
     text-align: left;
-    /* background: transparent; */
     border: 0;
     outline: none;
     width: 215px;
@@ -239,6 +237,7 @@ header nav .menu ul li a {
     width: 100%;
     height: 100%;
     overflow-y: hidden;
+    left: -30px;
 }
 
 .show {
@@ -249,14 +248,13 @@ header nav .menu ul li a {
     position: relative;
     display: flex;
     flex-direction: column;
-    /*align-items: center;*/
     justify-content: center;
-    width: 695px;
-    height: 385px;
+    width: 250px;
+    height: 100px;
     top: -30px;
 }
 
-.fullGif .content img {
+.maximize_img {
     width: 100%;
     height: 100%;
 }
@@ -267,6 +265,7 @@ header nav .menu ul li a {
     top: -35%;
     width: 15.8px;
     height: 15.8px;
+    cursor: pointer;
     z-index: 2;
 }
 
@@ -283,6 +282,33 @@ header nav .menu ul li a {
     color: #000000;
     text-align: left;
     margin: 0;
+}
+
+.maximize_icon_fav, .maximize_icon_download {
+    position: relative;
+    width: 36px;
+    height: 36px;
+    border: 1px solid #CED7E1;
+    border-radius: 6px;
+    margin-right: 20px;
+}
+
+.maximize_user_title_img {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.maximize_user_title {
+    width: 50%;
+}
+
+.maximize_user_title__img {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 50%;
 }
 
 /* ------------------------------------ CONTAINER1 ------------------------------------------ */
@@ -408,7 +434,6 @@ header nav .menu ul li a {
     margin: 0 20px 20px 0;
     color: #ffffff;
     user-select: none;
-    z-index: 1;
 }
 
 .container_gif {
@@ -579,6 +604,7 @@ header nav .menu ul li a {
     margin-right: 20px;
     color: #ffffff;
     user-select: none;
+    position: relative;
 }
 
 .container-slider {
@@ -860,6 +886,33 @@ header nav .menu ul li a {
 
     .container_gif:hover > .max_normal:hover {
         right: 40px;
+    }
+
+    /*--------------------------------- SEARCH -------------------------------------*/
+
+    .fullGif .content {
+        width: 695px;
+        height: 385px;
+        top: -30px;
+    }
+    
+    .maximize_img {
+        width: 100%;
+        height: 100%;
+    }
+    
+    .fullGif__close {
+        left: 96px;
+        top: -35%;
+        width: 15.8px;
+        height: 15.8px;
+    }
+    
+    .maximize_icon_fav, .maximize_icon_download {
+        width: 36px;
+        height: 36px;
+        border-radius: 6px;
+        margin-right: 20px;
     }
 
     /* -------------------------------- GIFOS ------------------------------------- */

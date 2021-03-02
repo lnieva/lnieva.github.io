@@ -105,31 +105,51 @@ function search_gifos () {
         gifCard.appendChild(cuadro)
         
         // Maximizar las imagenes
+        // max.addEventListener('click', () => {
+        //     const imageUrl = url
+        //     fullGif.classList.add('show')
+        //     const content = document.createElement('div')
+        //     content.classList.add('content')
+        //     const image = document.createElement('img')
+        //     image.src = imageUrl
+        //     const maximize_user = document.createElement('p')
+        //     maximize_user.classList.add('maximize_user')
+        //     if (!user == "") {
+        //         maximize_user.textContent = `${user}`
+        //     }else{
+        //         maximize_user.textContent = "Acamica"
+        //     }
+        //     const maximize_title = document.createElement('h3')
+        //     maximize_title.classList.add('maximize_title')
+        //     if (!title == "") {
+        //         maximize_title.textContent = `${title}`
+        //     }else{
+        //         maximize_title.textContent = "No Title"
+        //     }
+        //     content.appendChild(image)
+        //     content.appendChild(maximize_user)
+        //     content.appendChild(maximize_title)
+        //     document.querySelector('.fullGif__close').before(content)
+        // })
+
         max.addEventListener('click', () => {
-            const imageUrl = url
             fullGif.classList.add('show')
-            const content = document.createElement('div')
-            content.classList.add('content')
-            const image = document.createElement('img')
-            image.src = imageUrl
+            const content = document.querySelector('.maximize_user_title_img')
+            const maximize_img = document.createElement('img')
+            maximize_img.classList.add('content_img')
+            maximize_img.src = url
+            const maximize_user_title = document.querySelector('.maximize_user_title')
             const maximize_user = document.createElement('p')
             maximize_user.classList.add('maximize_user')
-            if (!user == "") {
-                maximize_user.textContent = `${user}`
-            }else{
-                maximize_user.textContent = "Acamica"
-            }
+            maximize_user.textContent = user
             const maximize_title = document.createElement('h3')
             maximize_title.classList.add('maximize_title')
-            if (!title == "") {
-                maximize_title.textContent = `${title}`
-            }else{
-                maximize_title.textContent = "No Title"
-            }
-            content.appendChild(image)
-            content.appendChild(maximize_user)
-            content.appendChild(maximize_title)
-            document.querySelector('.fullGif__close').before(content)
+            maximize_title.textContent = title
+            content.before(maximize_img)
+            maximize_user_title.appendChild(maximize_user)
+            maximize_user_title.appendChild(maximize_title)
+            //document.createElement('maximize_user').textContent = `${user}`
+            //document.createElement('maximize_title').textContent = title
         })
 
         createImg.appendChild(gifCard)
@@ -199,6 +219,9 @@ input.addEventListener("keyup", function(event) {
 // Close las imagenes maximizadas
 const fullGifClose = document.querySelector('.fullGif__close')
     fullGifClose.addEventListener('click', () => {
-        fullGif.querySelector('.content').remove()
+        document.querySelector('.content_img').remove()
+        document.querySelector('.maximize_user').remove()
+        document.querySelector('.maximize_title').remove()
+        //fullGif.querySelector('.content').remove()
         fullGif.classList.remove('show')
     })
