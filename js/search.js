@@ -44,6 +44,11 @@ function user_title_test (user_test, title_test, user_var, title_var) {
     }
 }
 
+// Hover user, title, favoritos, download y maximizar
+function hover_user_title_fav_down_max (gifCardAll) {
+    
+}
+
 // Click download Gif
 async function download_gif (url_gif, title_gif) {
     let a = document.createElement('a');
@@ -111,6 +116,7 @@ function search_gifos () {
 
         let max = document.createElement('div')
         max.classList.add("max_normal")
+        
         document.getElementById("linea-search-ok").style.display = "block"
         document.getElementById("title-search-ok").style.display = "block"
 
@@ -178,6 +184,7 @@ function search_gifos () {
         console.log(error)
         if (!namegif == ""){
             check_namegif("flex")
+            changeDisplay_search_ok()
         }else{
             changeDisplay_search_ok()
             check_namegif("none")
@@ -222,6 +229,5 @@ const fullGifClose = document.querySelector('.fullGif__close')
         document.querySelector('.content_img').remove()
         document.querySelector('.maximize_user').remove()
         document.querySelector('.maximize_title').remove()
-        //fullGif.querySelector('.content').remove()
         fullGif.classList.remove('show')
     })
