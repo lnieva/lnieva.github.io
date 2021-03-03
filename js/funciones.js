@@ -1,4 +1,3 @@
-
 // ------ VARIABLES ------
 
 const apiKey = "yTCjv2UMQEL7ayD0GnIrM7i1anyTY3Ov"
@@ -21,15 +20,30 @@ function changeDisplay_search_ok () {
 }
 
 function icon_search_close () {
-    document.getElementById("icon-search").style.display = "none"
-    document.getElementById("close-search").style.display = "block"
-    document.getElementById("icon-search_active").style.display = "block"
+    if ( !document.body.classList[0]){
+        document.getElementById("icon-search").style.display = "none"
+        document.getElementById("close-search").style.display = "block"
+        document.getElementById("icon-search_active").style.display = "block"
+    }else{
+        document.getElementById("icon-search").style.display = "none"
+        document.getElementById("icon-search-dark").style.display = "none"
+        document.getElementById("close-search-dark").style.display = "block"
+        document.getElementById("icon-search_active-dark").style.display = "block"
+    }
+    
 }
 
 function icon_search_ok () {
-    document.getElementById("icon-search").style.display = "block"
-    document.getElementById("close-search").style.display = "none"
-    document.getElementById("icon-search_active").style.display = "none"
+    if ( !document.body.classList[0]){
+        document.getElementById("icon-search").style.display = "block"
+        document.getElementById("close-search").style.display = "none"
+        document.getElementById("icon-search_active").style.display = "none"
+    }else{
+        document.getElementById("icon-search-dark").style.display = "block"
+        document.getElementById("close-search-dark").style.display = "none"
+        document.getElementById("icon-search_active-dark").style.display = "none"
+    }
+    
 }
 
 // Verifica si no esta vacio el usuario y el titlo del Gif
@@ -107,7 +121,7 @@ async function download_gif (url_gif, title_gif) {
     a.click()
 }
 
-//
+// Boton de ver MAS GIFOS
 function button_view_active () {
     document.querySelector('.button_view').classList.add('button_view_active')
     document.querySelector('.button_view__img').classList.add('button_view_active')

@@ -1,0 +1,65 @@
+/*----------------- BODY --------------*/
+.dark {
+    background:#37383C;
+}
+
+/*------------- HEADER -------------*/
+.dark .list-check, .dark #line {
+    background: black;
+}
+
+.dark #button-create {
+    background-image: url('/images/CTA-crar-gifo-modo-noc.svg');
+}
+
+.dark #button-create:hover {
+    background-image: url('/images/CTA-crear-gifo-hover-modo-noc.svg');
+}
+
+.dark .logo-dark {
+    display: block;
+}
+
+/*------------- SEARCH --------------*/
+.dark .searchmenu {
+    border: 1px solid white;
+}
+
+.dark #icon-search, .dark #close-search, .dark .logo, .dark #burger, 
+.dark .button_view__img, .dark #icon-search_active, .dark .fullGif__close {
+    display: none;
+}
+
+.dark #icon-search-dark, .dark .button_view__img_noct {
+    display: block;
+    position: relative;
+}
+
+.dark ::placeholder, .dark :-ms-input-placeholder, .dark ::-ms-input-placeholder {
+    color: #9CAFC3;
+}
+
+/*-------------- TRENDINGS -------------*/
+.dark #intro, .dark .list-check li a, .dark #title1, .dark #title2 h2, .dark #title3 a, .dark #title4, 
+.dark .utimategifos, .dark #title-search-ok, .dark .maximize_user, .dark .maximize_title {
+    color: white;
+}
+
+.dark #gifos {
+    background: #222326;
+}
+
+.dark .fullGif {
+    background: #37383C;
+}
+
+/*--------------------- DESKTOP -----------------*/
+@media screen and (min-width: 1000px){
+    .dark .list-check {
+        background: transparent;
+    }
+
+    .dark #icon-search-hover {
+        top: 12px;
+    }
+}

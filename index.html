@@ -9,28 +9,32 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/dark.css">
     <title>Gifos - Acamica</title>
 </head>
-<body>
+<body class="">
     <div id="line"></div>
     <header>
         <img src="./images/logo-desktop.svg" alt="logo" class="logo"/>
+        <img src="./images/Logo-modo-noc.svg" alt="logo-dark" class="logo-dark"/>
         <nav>
             <div class="menu">
                 <input type="checkbox" id="checkbox" />
                 <img src="./images/burger.svg" alt="burger" id="burger" class="displayblock">
+                <img src="./images/burger-modo-noct.svg" alt="burger" id="burger-dark" class="displayblock">
                 <img src="./images/close.svg" alt="close" id="close" class="displaynone">
+                <img src="./images/close-modo-noct.svg" alt="close-dark" id="close-dark" class="displaynone">
                 <ul class="list-check">
                     <li>
-                        <a href="#nocturno">Modo Nocturno</a>
+                        <a href="#nocturno" class="button_dark">Modo Nocturno</a>
                         <div class="line"></div>
                     </li>
                     <li>
-                        <a href="#favoritos">Favoritos</a>
+                        <a href="#favoritos" class="menu_favorite">Favoritos</a>
                         <div class="line"></div>
                     </li>
                     <li>
-                        <a href="#gifos">Mis GIFOS</a>
+                        <a href="#gifos" class="menu_MisGifos">Mis GIFOS</a>
                         <div class="line"></div>
                     </li>
                 </ul>
@@ -50,6 +54,7 @@
                 <div class="searchmenu__container">
                     <a href="#without-result">
                         <img src="./icons/icon-search-2.jpg" alt="icon-search" id="icon-search_active">
+                        <img src="./icons/icon-search-2-noc.jpg" alt="icon-search-dark" id="icon-search_active-dark">
                     </a>
                     <form class='form_Search'>
                         <label for="intro"></label>
@@ -57,7 +62,9 @@
                     </form>
                     <a href="#without-result">
                         <img src="./icons/icon-search.svg" alt="icon-search" id="icon-search">
+                        <img src="./icons/icon-search-modo-noct.svg" alt="icon-search-dark" id="icon-search-dark">
                         <img src="./images/close.svg" alt="close-search" id="close-search">
+                        <img src="./images/close-modo-noct.svg" alt="close-search-dark" id="close-search-dark">
                     </a>
                 </div>
                 <ul class='searchAutocomplete'></ul>
@@ -117,6 +124,7 @@
         </div>
         <div class="fullGif_container_close">
             <img src="./images/close.svg" alt="close" class="fullGif__close">
+            <img src="./images/close-modo-noct.svg" alt="close" class="fullGif__close-dark">
         </div>
     </div>
 
@@ -139,6 +147,7 @@
         <p id="reserved">© GIFOS 2020 All Rights Reserved.</p>
     </footer>
     <br/>
+    <script src="./js/main.js"></script>
     <script src="./js/funciones.js"></script>
     <script src="./js/search.js"></script>
     <script src="./js/autocomplete.js"></script>

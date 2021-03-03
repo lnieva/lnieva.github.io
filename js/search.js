@@ -152,8 +152,33 @@ document.getElementById("icon-search_active").addEventListener("click", () => {
     search_gifos() 
 })
 
-// Click en el Close
+// Click en el lupa Dark
+document.getElementById("icon-search-dark").addEventListener("click", () => {
+    icon_search_close()
+    removeAll()
+    search_gifos()
+})
+
+document.getElementById("icon-search_active-dark").addEventListener("click", () => {
+    removeAll()
+    search_gifos() 
+})
+
+// Click en el Close 
 document.getElementById("close-search").addEventListener("click", () => {
+    icon_search_ok()
+    changeDisplay_search_ok()
+    search_Autocomplete__lupa_item.innerHTML = ''
+    removeAll()
+    button_view_disable()
+    let check_error = document.getElementsByClassName("display")
+    for (let i=0; i < check_error.length; i++) {
+        check_error[i].style.display = "none"
+    }
+})
+
+// Click en el Close Dark
+document.getElementById("close-search-dark").addEventListener("click", () => {
     icon_search_ok()
     changeDisplay_search_ok()
     search_Autocomplete__lupa_item.innerHTML = ''
@@ -184,12 +209,31 @@ fullGifClose.addEventListener('click', () => {
     document.querySelector('#gifos').classList.remove('displaynone')
 })
 
+// Cierra las imagenes maximizadas Dark
+document.querySelector('.fullGif__close-dark').addEventListener('click', () => {
+    document.querySelector('.content_img').remove()
+    document.querySelector('.maximize_user').remove()
+    document.querySelector('.maximize_title').remove()
+    fullGif.classList.remove('show')
+    document.querySelector('#gifos').classList.remove('displaynone')
+})
+
 // Click Download Search/trendings
 document.querySelector('.maximize_icon_download').addEventListener("click", () => {
     download_gif(document.querySelector('.content_img').src, document.querySelector('.maximize_title').innerHTML)
 })
 
-
+// Boton Ver Mas
 document.querySelector('.button_view__img').addEventListener("click", () => {
     search_gifos()
+})
+
+document.querySelector('.button_view__img_noct').addEventListener("click", () => {
+    search_gifos()
+})
+
+
+// Dark Mode
+document.querySelector('.button_dark').addEventListener("click", () => {
+    document.body.classList.toggle('dark')
 })

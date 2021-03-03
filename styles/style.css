@@ -11,7 +11,7 @@ body {
     margin: 0;
     padding: 0;
     height:0;
- }
+}
 
 #line {
     height: 5px;
@@ -27,6 +27,17 @@ header {
 }
 
 .logo {
+    display: block;
+    position: relative;
+    float: left;
+    top: 29px;
+    height: 48px;
+    width: 48px;
+    left: 22px;
+}
+
+.logo-dark {
+    display: none;
     position: relative;
     float: left;
     top: 29px;
@@ -105,7 +116,19 @@ header nav .menu ul li a {
     right: 48px;
 }
 
+#burger-dark {
+    display: none;
+    position: absolute;
+    right: 48px;
+}
+
 #close {
+    position: absolute;
+    right: 48px;
+}
+
+#close-dark {
+    display: none;
     position: absolute;
     right: 48px;
 }
@@ -164,7 +187,7 @@ header nav .menu ul li a {
 .searchmenu {
     position: relative;
     width: 334px;
-    background: #FFFFFF;
+    background: transparent;
     border: 1px solid #572EE5;
     border-radius: 27px;
 }
@@ -189,6 +212,15 @@ header nav .menu ul li a {
     width: 215px;
     height: 22px;
     list-style: none;
+    background-color: transparent;
+}
+
+#icon-search-dark, #close-search-dark{
+    display: none;
+    position: relative;
+    right: 0;
+    left: -17px;
+    top: 5px;
 }
 
 #icon-search {
@@ -201,6 +233,13 @@ header nav .menu ul li a {
     position: relative;
     width: 20px;
     height: 20px;
+}
+
+#icon-search_active-dark {
+    display: none;
+    position: relative;
+    width: 20px;
+    height: 20px
 }
 
 .container_lupa_item {
@@ -369,6 +408,7 @@ header nav .menu ul li a {
 #title2 {
     width: 236px;
     height: 25px;
+    margin-bottom: 10px;
 }
 
 #title3 {
@@ -832,14 +872,13 @@ header nav .menu ul li a {
         top: 5px;
     }
 
-    #intro, #icon-search_active, #icon-search, #close-search {
-        top: 15px;
+    #intro, #icon-search_active, #icon-search, #close-search, #icon-search-dark, #close-search-dark, #icon-search_active, #icon-search_active-dark {
+        top: 14px;
     }
 
     #intro {
         position: relative;
         left: -50px;
-        background-color: transparent;
         top: 10px;
     }
 
@@ -988,6 +1027,10 @@ header nav .menu ul li a {
     }
 
     /* -------------------------------- GIFOS ------------------------------------- */
+
+    .utimategifos br {
+        display: none;
+    }
 
     #gifos {
         height: 430px;

@@ -15,6 +15,18 @@ checkburger.addEventListener("click",
         document.getElementById("close").classList.remove('displayblock');
         document.getElementById("close").classList.add('displaynone');
     }
-
+    if (document.body.className === "dark") {
+        document.getElementById("burger-dark").classList.remove('displayblock');
+        document.getElementById("burger-dark").classList.add('displaynone');
+        document.getElementById("close-dark").classList.remove('displaynone');
+        document.getElementById("close-dark").classList.add('displayblock');
+    }else{
+        document.getElementById("burger-dark").classList.remove('displaynone');
+        document.getElementById("burger-dark").classList.add('displayblock');
+        document.getElementById("close-dark").classList.remove('displayblock');
+        document.getElementById("close-dark").classList.add('displaynone');
+    }
 });
+
+
 
