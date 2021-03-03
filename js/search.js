@@ -236,4 +236,9 @@ document.querySelector('.button_view__img_noct').addEventListener("click", () =>
 // Dark Mode
 document.querySelector('.button_dark').addEventListener("click", () => {
     document.body.classList.toggle('dark')
+    if ( document.body.classList[0]){
+        localStorage.setItem('body', 'dark');
+    }else{
+        localStorage.removeItem('body');
+    }
 })

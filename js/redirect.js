@@ -3,3 +3,14 @@ window.addEventListener('resize', function() {
 		window.location.href = "../index.html"; 
 	}
 });
+
+// Dark Mode
+document.querySelector('.button_dark').addEventListener("click", () => {
+    document.body.classList.toggle('dark')
+    if ( document.body.classList[0]){
+        localStorage.setItem('body', 'dark');
+    }else{
+        localStorage.removeItem('body');
+    }
+})
+

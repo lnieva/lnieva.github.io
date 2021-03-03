@@ -223,4 +223,8 @@
         margin: 14px 0;
     }
 
+    #camara-dark {
+        display: none;
+    }
+
 }

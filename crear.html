@@ -11,35 +11,40 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styles/style.css">
     <link rel="stylesheet" href="./styles/style-create-gif.css">
+    <link rel="stylesheet" href="./styles/dark.css">
     <title>Gifos - Acamica</title>
 </head>
 <body>
+    <script src="./js/dark.js" ></script>
     <div id="line"></div>
     <header>
         <a href="./index.html">
             <img src="./images/logo-desktop.svg" alt="logo" class="logo"/>
+            <img src="./images/Logo-modo-noc.svg" alt="logo-dark" class="logo-dark"/>
         </a>
         <nav>
             <div class="menu">
                 <input type="checkbox" id="checkbox" />
                 <img src="./images/burger.svg" alt="burger" id="burger" class="displayblock">
+                <img src="./images/burger-modo-noct.svg" alt="burger" id="burger-dark" class="displayblock">
                 <img src="./images/close.svg" alt="close" id="close" class="displaynone">
+                <img src="./images/close-modo-noct.svg" alt="close-dark" id="close-dark" class="displaynone">
                 <ul class="list-check">
                     <li>
-                        <a href="#nocturno">Modo Nocturno</a>
+                        <a href="#nocturno" class="button_dark">Modo Nocturno</a>
                         <div class="line"></div>
                     </li>
                     <li>
-                        <a href="#favoritos">Favoritos</a>
+                        <a href="#favoritos" class="menu_favorite">Favoritos</a>
                         <div class="line"></div>
                     </li>
                     <li>
-                        <a href="#gifos">Mis GIFOS</a>
+                        <a href="#gifos" class="menu_MisGifos">Mis GIFOS</a>
                         <div class="line"></div>
                     </li>
                 </ul>
-                <a href="./index.html">
-                    <div id="button-create-home"></div>
+                <a href="./crear.html">
+                    <div id="button-create"></div>
                 </a>
             </div>
         </nav>
@@ -49,6 +54,7 @@
             <div id="create-image">
                 <div id="camara-image">
                     <img src="./images/camara.svg" alt="camara" id="camara">
+                    <img src="./images/camara-modo-noc.svg" alt="camara-dark" id="camara-dark">
                     <img src="./images/element-luz-camara.svg" alt="element-luz-camara" id="element-luz-camara">
                 </div>
                 <div id="square-create-gif">

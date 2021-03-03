@@ -133,3 +133,15 @@ function button_view_disable () {
 }
 
 button_view_disable()
+
+// Verifica el modo Dark
+function body_dark () {
+    const dark = localStorage.getItem("body");
+    if (dark === "dark") {
+            document.body.classList.add('dark')
+    }else{
+            document.body.classList.remove('dark')
+    }
+}
+
+body_dark()
