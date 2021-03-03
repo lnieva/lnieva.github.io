@@ -95,7 +95,7 @@
 
 
     /*--------------------------------------------------------------------*/
-    
+
     #sesion_total {
         display: flex;
         flex-direction: column;
@@ -266,7 +266,7 @@
         height: 32px;
         border: 1px solid #572EE5;
         border-radius: 27px;
-        margin-right: 26px;
+        margin-left: 28px;
     }
 
     #container_pelicula {
@@ -274,18 +274,10 @@
         justify-content: flex-start;
         align-items: flex-end;
         position: relative;
-        /* left: 150px; */
-        /* right: 180px;
-        top: -80px; */
-        /* width: 15%; */
-
     }
 
-    #container_pelicula img {
-        display: flex;
-        justify-content: flex-start;
-        align-items: flex-end;
-        position: relative;
+    #film-dark {
+        display: none;
     }
 
     #line_down {
@@ -293,8 +285,6 @@
         justify-content: center;
         align-items: center;
         width: 100%;
-        /* height: 38px; */
-        /* top: -75px; */
     }
 
     #line_down_test {
@@ -303,7 +293,34 @@
         background: #572EE5;
         border-radius: 5px;
         position: relative;
-        /* left: -60px; */
+    }
+
+    #button_rec{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        height: 50px;
+        position: relative;
+        top: 20.1px;
+    }
+
+    #button_rec_active{
+        border: 1px solid #572EE5;
+        background: transparent;
+        border-radius: 25px;
+        width: 127px;
+        height: 50px;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: bold;
+        font-size: 13px;
+        color: #572EE5;
+        letter-spacing: 0;
+        text-align: center;
+        cursor: pointer;
+    }
+
+    #button_rec_active:focus {
+        outline:0;
     }
 
 }

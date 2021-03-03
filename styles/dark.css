@@ -26,11 +26,13 @@
 }
 
 .dark #icon-search, .dark #close-search, .dark .logo, .dark #burger, 
-.dark .button_view__img, .dark #icon-search_active, .dark .fullGif__close, .dark #camara {
+.dark .button_view__img, .dark #icon-search_active, .dark .fullGif__close, 
+.dark #camara, .dark #film {
     display: none;
 }
 
-.dark #icon-search-dark, .dark .button_view__img_noct, .dark #camara-dark, .dark .fullGif__close-dark {
+.dark #icon-search-dark, .dark .button_view__img_noct, .dark #camara-dark, 
+.dark .fullGif__close-dark, .dark #film-dark {
     display: block;
     position: relative;
 }
@@ -66,6 +68,15 @@
 .dark .utimategifos, .dark #title-search-ok, .dark .maximize_user, .dark .maximize_title, .dark #title-crear-h2, 
 .dark #title-crear p, .dark #reserved, .dark #compartir, .dark .links i:hover {
     color: white;
+}
+
+.dark #line_down_test {
+    background: white;
+}
+
+.dark #paso_1, .dark #paso_2, .dark #paso_3, .dark #button_rec_active {
+    color: white;
+    border: 1px solid white;
 }
 
 .dark #gifos {
