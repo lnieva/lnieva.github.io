@@ -344,11 +344,6 @@ header nav .menu ul li a {
     outline:0;
 }
 
-
-.button_view__img {
-    display: none;
-}
-
 .button_view__img, .button_view__img_hover, .button_view__img_noct, .button_view__img_noct_hover {
     display: none;
     cursor: pointer;

@@ -108,13 +108,18 @@ function search_gifos () {
         if(!response[0].data.length == "0" ){
             check_namegif("none")
             if (!response[0].data == ""){
-                const data = numbers.slice(0,12)
-                data.forEach(gif => {
-                    const user = response[0].data[gif].username
-                    const title = response[0].data[gif].title
-                    const url = response[0].data[gif].images.original.url
-                    showGif(user, title, url)
-                })
+                let cant = document.querySelectorAll('.result-search > div').length
+                if ( cant <= 48 ) {
+                    const data = numbers.slice(0,12)
+                        data.forEach(gif => {
+                        const user = response[0].data[gif].username
+                        const title = response[0].data[gif].title
+                        const url = response[0].data[gif].images.original.url
+                        showGif(user, title, url)
+                        })
+                }else{
+                    alert('El limite de busqueda son 48 Gif')
+                }
             }
         }else{
             numbers.forEach(gif => {
