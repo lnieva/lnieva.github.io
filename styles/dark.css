@@ -21,7 +21,7 @@
 }
 
 /*------------- SEARCH --------------*/
-.dark .searchmenu {
+.dark .searchmenu, .dark #square-create-gif {
     border: 1px solid white;
 }
 
