@@ -345,6 +345,7 @@ header nav .menu ul li a {
     border: 1px solid #CED7E1;
     border-radius: 6px;
     margin-right: 5px;
+    cursor: pointer;
 }
 
 .maximize_user_title_img {
@@ -1011,10 +1012,13 @@ header nav .menu ul li a {
     }
 
     .fullGif__close {
-        /* left: 96px;
-        top: -35%; */
         width: 15.8px;
         height: 15.8px;
+    }
+
+    .fullGif__close-dark {
+        display: none;
+        cursor: pointer;
     }
 
     .maximize_icon_fav, .maximize_icon_download {

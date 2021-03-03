@@ -1,5 +1,4 @@
 // ------ CREA LOS TRENDING GIF ------
-
 const trendingEndpoint = "https://api.giphy.com/v1/gifs/trending?api_key="
 
 fetch(`${trendingEndpoint}${apiKey}`)
