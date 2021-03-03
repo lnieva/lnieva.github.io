@@ -17,7 +17,12 @@ const searchSuggestions = async term => {
         container_lupa_item.classList.add('container_lupa_item')
         const lupa_item = document.createElement('img')
         container_lupa_item.classList.add('container_lupa_item__lupa')
-        lupa_item.src = '../icons/icon-search-2.jpg'
+        const dark = localStorage.getItem("body");
+        if (dark === "dark") {
+          lupa_item.src = '../icons/icon-search-2-noc.jpg'
+        }else{
+          lupa_item.src = '../icons/icon-search-2.jpg'
+        }
         const item_link = document.createElement('li')
         const item = document.createElement('a')
         item.setAttribute("href", "#intro");

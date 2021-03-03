@@ -39,6 +39,9 @@
     color: #9CAFC3;
 }
 
+.dark .container_lupa_item > img {
+    background-image: url("../icons/icon-search-2-noc.jpg");
+}
 
 .dark #slider-left {
     background-image: url("../images/button-slider-left-md-noct.svg");

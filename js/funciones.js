@@ -24,11 +24,16 @@ function icon_search_close () {
         document.getElementById("icon-search").style.display = "none"
         document.getElementById("close-search").style.display = "block"
         document.getElementById("icon-search_active").style.display = "block"
+        document.getElementById("icon-search-dark").style.display = "none"
+        document.getElementById("close-search-dark").style.display = "none"
+        document.getElementById("icon-search_active-dark").style.display = "none"
     }else{
-        document.getElementById("icon-search").style.display = "none"
         document.getElementById("icon-search-dark").style.display = "none"
         document.getElementById("close-search-dark").style.display = "block"
         document.getElementById("icon-search_active-dark").style.display = "block"
+        document.getElementById("icon-search").style.display = "none"
+        document.getElementById("close-search").style.display = "none"
+        document.getElementById("icon-search_active").style.display = "none"
     }
     
 }
@@ -38,10 +43,16 @@ function icon_search_ok () {
         document.getElementById("icon-search").style.display = "block"
         document.getElementById("close-search").style.display = "none"
         document.getElementById("icon-search_active").style.display = "none"
+        document.getElementById("icon-search-dark").style.display = "none"
+        document.getElementById("close-search-dark").style.display = "none"
+        document.getElementById("icon-search_active-dark").style.display = "none"
     }else{
         document.getElementById("icon-search-dark").style.display = "block"
         document.getElementById("close-search-dark").style.display = "none"
         document.getElementById("icon-search_active-dark").style.display = "none"
+        document.getElementById("icon-search").style.display = "none"
+        document.getElementById("close-search").style.display = "none"
+        document.getElementById("icon-search_active").style.display = "none"
     }
     
 }
@@ -140,8 +151,7 @@ function body_dark () {
     if (dark === "dark") {
             document.body.classList.add('dark')
     }else{
-            document.body.classList.remove('dark')
+        document.body.classList.remove('dark')
     }
 }
-
 body_dark()

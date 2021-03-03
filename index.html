@@ -119,8 +119,8 @@
                 <div class="maximize_user_title">
                 </div>
                 <div class="maximize_user_title__img">
-                    <img src="./icons/icon-fav.svg" class="maximize_icon_fav">
-                    <img src="/icons/icon-download.svg" class="maximize_icon_download">
+                    <img onmouseover="this.src='./icons/icon-fav-hover.svg'" onmouseout="this.src='./icons/icon-fav.svg'" src="./icons/icon-fav.svg" alt="icon-fav" class="maximize_icon_fav">
+                    <img onmouseover="this.src='./icons/icon-download-hover.svg'" onmouseout="this.src='./icons/icon-download.svg'" src="./icons/icon-download.svg" alt="icon-fav" class="maximize_icon_download">
                 </div>
             </div>
         </div>
@@ -129,7 +129,6 @@
             <img src="./images/close-modo-noct.svg" alt="close" class="fullGif__close-dark">
         </div>
     </div>
-
     <footer id="footer">
         <div id="container-compartir-href">
             <p id="compartir">Compartir en:</p>
@@ -146,15 +145,14 @@
                 </a>
             </div>
         </div>
-        <p id="reserved">© GIFOS 2020 All Rights Reserved.</p>
+        <p id="reserved">© GIFOS 2020 All Rights Reserved.</p>   
     </footer>
-    <br/>
-    <div id="line"></div>
     <script src="./js/main.js"></script>
     <script src="./js/funciones.js"></script>
     <script src="./js/search.js"></script>
     <script src="./js/autocomplete.js"></script>
     <script src="./js/trending-title.js"></script>
     <script src="./js/trending-gif.js"></script>
+    
 </body>
 </html>

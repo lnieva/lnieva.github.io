@@ -215,11 +215,11 @@ header nav .menu ul li a {
     background-color: transparent;
 }
 
-#icon-search-dark, #close-search-dark{
+#icon-search-dark, #close-search-dark {
     display: none;
     position: relative;
     right: 0;
-    left: -17px;
+    left: -15px;
     top: 5px;
 }
 
