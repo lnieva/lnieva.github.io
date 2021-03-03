@@ -161,7 +161,7 @@ document.getElementById("icon-search-dark").addEventListener("click", () => {
 
 document.getElementById("icon-search_active-dark").addEventListener("click", () => {
     removeAll()
-    search_gifos() 
+    search_gifos()
 })
 
 // Click en el Close 
@@ -196,7 +196,7 @@ input.addEventListener("keyup", function(event) {
     //icon_search_close()
     if (event.keyCode === 13) {
         search_gifos()
-}
+    }
 });
 
 // Cierra las imagenes maximizadas

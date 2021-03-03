@@ -95,6 +95,14 @@
 
 
     /*--------------------------------------------------------------------*/
+    
+    #sesion_total {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
 
     #container-image-camara {
         display: flex;
@@ -131,7 +139,7 @@
         margin: 0;
         padding: 0;
         top: 14px;
-        left: -9%;
+        left: -6%;
 
     }
 
@@ -225,6 +233,77 @@
 
     #camara-dark {
         display: none;
+    }
+
+    #container_test_line_cinta {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+
+    #container_test {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 75px;
+        width: 1000px;
+        top: 5px;
+        left: 50px;
+    }
+    
+    #paso_1, #paso_2, #paso_3 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 700;
+        font-size: 18px;
+        color: #572EE5;
+        text-align: center;
+        width: 32px;
+        height: 32px;
+        border: 1px solid #572EE5;
+        border-radius: 27px;
+        margin-right: 26px;
+    }
+
+    #container_pelicula {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-end;
+        position: relative;
+        /* left: 150px; */
+        /* right: 180px;
+        top: -80px; */
+        /* width: 15%; */
+
+    }
+
+    #container_pelicula img {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-end;
+        position: relative;
+    }
+
+    #line_down {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        /* height: 38px; */
+        /* top: -75px; */
+    }
+
+    #line_down_test {
+        width: 795.9px;
+        height: 5px;
+        background: #572EE5;
+        border-radius: 5px;
+        position: relative;
+        /* left: -60px; */
     }
 
 }

@@ -219,7 +219,7 @@ header nav .menu ul li a {
     display: none;
     position: relative;
     right: 0;
-    left: -15px;
+    /* left: -15px; */
     top: 5px;
 }
 
