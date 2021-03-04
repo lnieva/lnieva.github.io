@@ -173,7 +173,7 @@
     }
 
     #box-button {
-        top: 85%
+        top: 95%
     }
 
     #box-1, #box-2, #box-3, #box-4 {
@@ -212,7 +212,7 @@
         width: 100%;
     }
 
-    #title-crear-h2 {
+    .title-crear-h1, .title-crear-h2 {
         font-family: 'Montserrat', sans-serif;
         font-weight: bold;
         font-size: 25px;
@@ -222,7 +222,7 @@
         margin: 0;
     }
 
-    #title-crear p {
+    .title-crear-p1, .title-crear-p2 {
         font-family: 'Roboto', sans-serif;
         font-size: 16px;
         color: #000000;

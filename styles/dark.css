@@ -65,8 +65,9 @@
 
 /*-------------- TRENDINGS -------------*/
 .dark #intro, .dark .list-check li a, .dark #title1, .dark #title2 h2, .dark #title3 a, .dark #title4, 
-.dark .utimategifos, .dark #title-search-ok, .dark .maximize_user, .dark .maximize_title, .dark #title-crear-h2, 
-.dark #title-crear p, .dark #reserved, .dark #compartir, .dark .links i:hover {
+.dark .utimategifos, .dark #title-search-ok, .dark .maximize_user, .dark .maximize_title, .dark .title-crear-h1, 
+.dark .title-crear-p1, .dark .title-crear-h2, .dark .title-crear-p2, .dark #reserved, 
+.dark #compartir, .dark .links i:hover {
     color: white;
 }
 
