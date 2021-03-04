@@ -20,6 +20,7 @@ fetch(`${urltrending}${apiKey}`)
 function updateValue(val, event) {
     document.getElementById("intro").value = val;
     event.preventDefault();
+    removeAll()
     search_gifos()
     icon_search_close()
 }

@@ -51,10 +51,12 @@ input_Search.addEventListener('keyup', e => {
   searchSuggestions(input_Search.value)
 })
 
+// Seleccionamos uno de los nombres del autoplete
 function autocomplete_updateValue(val, event) {
   document.getElementById("intro").value = val;
   event.preventDefault();
   search_gifos()
+  icon_search_close()
   search_Autocomplete.innerHTML = ''
   //searchmenu__height.style.height = "50px"
 }

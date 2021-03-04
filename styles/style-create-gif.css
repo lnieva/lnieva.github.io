@@ -304,7 +304,7 @@
         top: 20.1px;
     }
 
-    #button_rec_active{
+    .button_rec_active, .button_rec_start{
         border: 1px solid #572EE5;
         background: transparent;
         border-radius: 25px;
@@ -319,8 +319,10 @@
         cursor: pointer;
     }
 
-    #button_rec_active:focus {
+    .button_rec_active:focus, .button_rec_start:focus {
         outline:0;
     }
+
+
 
 }
