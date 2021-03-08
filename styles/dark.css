@@ -25,9 +25,9 @@
     border: 1px solid white;
 }
 
-.dark #icon-search, .dark #close-search, .dark .logo, .dark #burger, 
+.dark #icon-search, .dark #close-search, .dark .logo, 
 .dark .button_view__img, .dark #icon-search_active, .dark .fullGif__close, 
-.dark #camara, .dark #film {
+.dark #camara, .dark #film, .dark #burger, .dark #close {
     display: none;
 }
 
@@ -67,7 +67,7 @@
 .dark #intro, .dark .list-check li a, .dark #title1, .dark #title2 h2, .dark #title3 a, .dark #title4, 
 .dark .utimategifos, .dark #title-search-ok, .dark .maximize_user, .dark .maximize_title, .dark .title-crear-h1, 
 .dark .title-crear-p1, .dark .title-crear-h2, .dark .title-crear-p2, .dark #reserved, 
-.dark #compartir, .dark .links i:hover {
+.dark #compartir, .dark .links i:hover, .dark #burger-dark, .dark #close-search-dark, .dark #title_misGifos{
     color: white;
 }
 
@@ -75,7 +75,7 @@
     background: white;
 }
 
-.dark #paso_1, .dark #paso_2, .dark #paso_3, .dark #button_rec_active {
+.dark .paso_1, .dark .paso_2, .dark .paso_3, .dark .btnStart, .dark .btnRecord {
     color: white;
     border: 1px solid white;
 }

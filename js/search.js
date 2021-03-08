@@ -140,6 +140,18 @@ function search_gifos () {
     })
 }
 
+// Boton de ver MAS GIFOS
+function button_view_active () {
+    document.querySelector('.button_view').classList.add('button_view_active')
+    document.querySelector('.button_view__img').classList.add('button_view_active')
+}
+
+function button_view_disable () {
+    document.querySelector('.button_view').classList.remove('button_view_active')
+    document.querySelector('.button_view__img').classList.remove('button_view_active')
+}
+button_view_disable()
+
 // Click en el lupa
 document.getElementById("icon-search").addEventListener("click", () => {
     icon_search_close()
@@ -238,7 +250,12 @@ document.querySelector('.button_dark').addEventListener("click", () => {
     document.body.classList.toggle('dark')
     if ( document.body.classList[0]){
         localStorage.setItem('body', 'dark');
+        document.querySelector('#close-dark').classList.remove('displaynone')
+        document.querySelector('#close').classList.add('displaynone')
     }else{
         localStorage.removeItem('body');
+        document.querySelector('#close-dark').classList.add('displaynone')
+        document.querySelector('#close').classList.remove('displaynone')
     }
 })
+

@@ -39,7 +39,7 @@
                         <div class="line"></div>
                     </li>
                     <li>
-                        <a href="#gifos" class="menu_MisGifos">Mis GIFOS</a>
+                        <a href="./misgifos.html" class="menu_MisGifos">Mis GIFOS</a>
                         <div class="line"></div>
                     </li>
                 </ul>
@@ -58,11 +58,21 @@
                     <img src="./images/element-luz-camara.svg" alt="element-luz-camara" id="element-luz-camara">
                 </div>
                 <div id="square-create-gif">
+                    <div class="container_video"></div>
                     <div id="container-box">
                         <div id="box-top">
                             <div id="box-1"></div>
                             <div id="box-2"></div>
                         </div>
+                        <video></video>
+                        <img src="" class="viewGif_record displaynone">
+                        <div class="video_text">
+                            <img src="../images/loader.svg" alt="" class="img_course_upload displaynone">
+                            <img src="../images/ok.svg" alt="" class="img_ok_upload displaynone">
+                            <p class="text_course_upload displaynone">Estamos subiendo tu GIFO</p>
+                            <p class="text_ok_upload displaynone">GIFO subido con éxito</p>
+                        </div>
+                        
                         <div id="title-crear">
                             <h2 class="title-crear-h1 ">Aquí podrás <br> crear tus propios <span id="span1">GIFOS</span></h2>
                             <p class="title-crear-p1">¡Crea tu GIFO en sólo 3 pasos! <br> (sólo necesitas una cámara para grabar un video)</p>
@@ -74,15 +84,31 @@
                             <div id="box-3"></div>
                             <div id="box-4"></div>
                         </div>
+                        <div id="Btn_Donwload_link">
+                                <button id="btn-download" class="displaynone">
+                                    <img src="./icons/icon-download.svg" alt="icon-download">
+                                </button>
+                                <button id="btn-link" class="displaynone">
+                                    <img src="./icons/icon-link-normal.svg" alt="icon-link-normal">
+                                </button>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
         <div id="container_test_line_cinta">
+            <div></div>
             <div id="container_test">
-                <div id="paso_1">1</div>
-                <div id="paso_2">2</div>
-                <div id="paso_3">3</div>
+                <div class="paso_1">1</div>
+                <div class="paso_2">2</div>
+                <div class="paso_3">3</div>
+            </div>
+            <div class="time_square">
+                <p class="time displaynone">00:00:00</p>
+                <div class="time_repeat_line">
+                    <p class="repeat displaynone">REPETIR CAPTURA</p>
+                    <div class="repeat_line displaynone"></div>
+                </div>
             </div>
             <div id="container_pelicula">
                 <img src="./images/pelicula.svg" alt="film" id="film">
@@ -93,8 +119,10 @@
             <div id="line_down_test"></div>
         </div>
         <div id="button_rec">
-            <button class="button_rec_active">COMENZAR</button>
-            <button class="button_rec_start displaynone">GRABAR</button>
+            <button class="btnStart">COMENZAR</button>
+            <button class="btnRecord displaynone">GRABAR</button>
+            <button class="btnFinish displaynone">FINALIZAR</button>
+            <button class="btnUpload displaynone">SUBIR GIFO</button>
         </div>    
     </section>
     <footer id="footer">
@@ -115,6 +143,9 @@
         </div>
         <p id="reserved">© GIFOS 2020 All Rights Reserved.</p>
     </footer>
+    <script src="https://www.WebRTC-Experiment.com/RecordRTC.js"></script>
+    <script src="./js/main.js"></script>
     <script src="./js/crear.js"></script>
 </body>
-</html>
+</body>
+</main

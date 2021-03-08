@@ -4,7 +4,6 @@ const apiKey = "yTCjv2UMQEL7ayD0GnIrM7i1anyTY3Ov"
 const urltrending = "https://api.giphy.com/v1/trending/searches?api_key="
 const randomGif = `https://api.giphy.com/v1/gifs/random?api_key=${apiKey}&tag=`
 
-
 // Remueve los gif
 function removeAll () {
     let remove = document.querySelector(".result-search")
@@ -132,24 +131,12 @@ async function download_gif (url_gif, title_gif) {
     a.click()
 }
 
-// Boton de ver MAS GIFOS
-function button_view_active () {
-    document.querySelector('.button_view').classList.add('button_view_active')
-    document.querySelector('.button_view__img').classList.add('button_view_active')
-}
-
-function button_view_disable () {
-    document.querySelector('.button_view').classList.remove('button_view_active')
-    document.querySelector('.button_view__img').classList.remove('button_view_active')
-}
-
-button_view_disable()
-
 // Verifica el modo Dark
 function body_dark () {
     const dark = localStorage.getItem("body");
     if (dark === "dark") {
             document.body.classList.add('dark')
+            document.querySelector('#burger-dark').classList.remove('displaynone')
     }else{
         document.body.classList.remove('dark')
     }

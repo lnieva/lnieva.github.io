@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/misgifos.css">
     <link rel="stylesheet" href="./styles/dark.css">
     <title>Gifos - Acamica</title>
 </head>
@@ -36,7 +37,7 @@
                         <div class="line"></div>
                     </li>
                     <li>
-                        <a href="./misgifos.html" class="menu_MisGifos">Mis GIFOS</a>
+                        <a href="#gifos" class="menu_MisGifos">Mis GIFOS</a>
                         <div class="line"></div>
                     </li>
                 </ul>
@@ -46,52 +47,16 @@
             </div>
         </nav>
     </header>
-    <section id="container_misgifos">
-        <div id="misgifos">
-            <h2 id="title1">Inspírate, busca, guarda, y crea los mejores <span id="span1">GIFOS</span></h2>
+    <section id="container_misGifos">
+        <div id="icon_title_misGifos">
+            <img src="./icons/icon-mis-gifos.svg" alt="icon-mis-gifos" id="icon_misGifos">
+            <h2 id="title_misGifos">Mis GIFOS</h2>
         </div>
-        <div id="search">
-            <img src="./images/ilustra_header.svg" alt="friend" id="friend" for="intro">
-            <div class="searchmenu">
-                <div class="searchmenu__container">
-                    <a href="#without-result">
-                        <img src="./icons/icon-search-2.jpg" alt="icon-search" id="icon-search_active">
-                        <img src="./icons/icon-search-2-noc.jpg" alt="icon-search-dark" id="icon-search_active-dark">
-                    </a>
-                    <form class='form_Search'>
-                        <label for="intro"></label>
-                        <input class="input" type="text" placeholder="Busca GIFOS y más" name="intro1" id="intro" value="">
-                    </form>
-                    <a href="#without-result">
-                        <img src="./icons/icon-search.svg" alt="icon-search" id="icon-search">
-                        <img src="./icons/icon-search-modo-noct.svg" alt="icon-search-dark" id="icon-search-dark">
-                        <img src="./images/close.svg" alt="close-search" id="close-search">
-                        <img src="./images/close-modo-noct.svg" alt="close-search-dark" id="close-search-dark">
-                    </a>
-                </div>
-                <ul class='searchAutocomplete'></ul>
-            </div>
-            <div id="change"></div>
+        <div id="misGifos_nocontent_img_title">
+            <img src="./icons/icon-mis-gifos-sin-contenido.svg" alt="icon-mis-gifos-sin-contenido" id="misGifos_nocontent_img">
+            <p id="misGifos_nocontent_title">¡Anímate a crear tu primer GIFO!</p>
         </div>
-    </section>
-    <section id="container1">
-        <div id="title2">
-            <h2>Trending:</h2>
-        </div>
-        <div id="title3"></div>
-        <div id="without-result" class="display">
-            <div id="line-result" class="display"></div>
-            <p id="title-search" class="display"></p>
-            <img src="./icons/icon-busqueda-sin-resultado.svg" alt="icon-busqueda-sin-resultado" id="icon-without-result" class="display">
-            <p id="another-search" class="display">Intenta con otra búsqueda.</p>
-        </div>
-        <div id="linea-search-ok" class="display"></div>
-        <h2 id="title-search-ok" class="display"></h2>
-        <div class="result-search"></div>
-        <button class="button_view">
-            <img onmouseover="this.src='./images/CTA-ver-mas-hover.svg'" onmouseout="this.src='./images/CTA-ver-mas.svg' "src="./images/CTA-ver-mas.svg" alt="CTA-ver-mas" class="button_view__img">
-            <img onmouseover="this.src='./images/CTA-ver+hover-modo-noc.svg'" onmouseout="this.src='./images/CTA-ver+-modo-noc.svg'" src="./images/CTA-ver+-modo-noc.svg" alt="CTA-ver-mas" class="button_view__img_noct">
-        </button>
+        <div id="localgif"></div>
     </section>
     <section id="gifos">
         <div id="container2">
@@ -111,7 +76,6 @@
             </div>
         </div>
     </section>
-
     <div class="fullGif">
         <div class="content">
             <div class="maximize_user_title_img">
@@ -148,10 +112,8 @@
     </footer>
     <script src="./js/main.js"></script>
     <script src="./js/funciones.js"></script>
-    <script src="./js/search.js"></script>
-    <script src="./js/autocomplete.js"></script>
-    <script src="./js/trending-title.js"></script>
     <script src="./js/trending-gif.js"></script>
-    
+    <script src="./js/misgifos.js"></script>
+
 </body>
 </html>

@@ -173,7 +173,8 @@
     }
 
     #box-button {
-        top: 95%
+        position: absolute;
+        top: 105%
     }
 
     #box-1, #box-2, #box-3, #box-4 {
@@ -220,6 +221,8 @@
         text-align: center;
         line-height: 35px;
         margin: 0;
+        position: relative;
+        z-index: -1;
     }
 
     .title-crear-p1, .title-crear-p2 {
@@ -229,6 +232,8 @@
         text-align: center;
         line-height: 29px;
         margin: 14px 0;
+        position: relative;
+        z-index: -1;
     }
 
     #camara-dark {
@@ -253,7 +258,7 @@
         left: 50px;
     }
     
-    #paso_1, #paso_2, #paso_3 {
+    .paso_1, .paso_2, .paso_3 {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -267,6 +272,11 @@
         border: 1px solid #572EE5;
         border-radius: 27px;
         margin-left: 28px;
+    }
+
+    .paso_active {
+        color: white;
+        background: #572EE5;
     }
 
     #container_pelicula {
@@ -304,7 +314,7 @@
         top: 20.1px;
     }
 
-    .button_rec_active, .button_rec_start{
+    .btnStart, .btnRecord, .btnFinish, .btnUpload {
         border: 1px solid #572EE5;
         background: transparent;
         border-radius: 25px;
@@ -319,10 +329,138 @@
         cursor: pointer;
     }
 
-    .button_rec_active:focus, .button_rec_start:focus {
+    .btnStart:focus, .btnRecord:focus, .btnRecord:focus, .btnFinish:focus, .btnUpload:focus  {
         outline:0;
     }
 
+    .btnStart:hover, .btnRecord:hover, .btnFinish:hover, .btnUpload:hover {
+        background: #572EE5;
+        color: white;
+    }
 
+    .time_square {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        width: 200px;
+        height: 30px;
+        left: 57%;
+    }
+
+    .time, .repeat {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: bold;
+        font-size: 15px;
+        color: #572EE5;
+        letter-spacing: 0;
+        text-align: center;
+        line-height: 22px;
+        padding: 15px;
+    }
+
+    .time_repeat_line {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .repeat {
+        font-size: 13px;
+        cursor: pointer;
+    }
+
+    .repeat_line {
+        position: relative;
+        width: 150px;
+        top: -30px;
+        border: 1px solid #5ED7C6;
+    }
+
+    .container_video {
+        position: absolute;
+        width: 571px;
+        height: 320px;
+        /* border: 1px solid red; */
+        top: 38px;
+        /* right: 29%; */
+        z-index: 1;
+        opacity: 0.8;
+        background: #572EE5;
+    }
+
+    video {
+        position: relative;
+        left: 0px;
+        z-index: -1;
+    }
+
+    .video {
+        opacity: 0.8;
+        background: #572EE5;
+    }
+
+    .video_text {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        top: -190px;
+        z-index: 1;
+    }
+
+    .video_text p {
+        position:relative;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: bold;
+        font-size: 15px;
+        color: #fff;
+        text-align: center;
+        z-index: 1;  
+    }
+
+    #Btn_Donwload_link {
+        position: absolute;
+        width: 100%;
+        height: 32px;
+        display: flex;
+        justify-content: flex-end;
+        top: 35px;
+    }
+
+    #btn-download, #btn-link{
+        position: relative;
+        width: 32px;
+        height: 32px;
+        padding: 0;
+        z-index: 2;
+        right: 30px;
+        opacity: 0.7;
+        margin-right: 10px;
+        border-radius: 6px;
+        border: 2px;
+        cursor: pointer;
+    }
+    #btn-download:focus, #btn-link:focus {
+        outline:0;
+    }
+
+    #btn-download:hover {
+        background-image: url("../icons/icon-download-hover.svg");
+        opacity: 1;
+    }    
+
+    #btn-link:hover {
+        background-image: url("../icons/icon-link-hover.svg");
+        opacity: 1;
+    }
+
+    .viewGif_record {
+        position: absolute;
+        left: 24px;
+        width: 571px;
+        height: 320px;
+        top: 27px;
+    }
 
 }
