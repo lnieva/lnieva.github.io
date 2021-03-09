@@ -61,11 +61,6 @@ document.querySelector('.fullGif__close-dark').addEventListener('click', () => {
     document.querySelector('#gifos').classList.remove('displaynone')
 })
 
-// Click Download Search/trendings
-document.querySelector('.maximize_icon_download').addEventListener("click", () => {
-    download_gif(document.querySelector('.content_img').src, document.querySelector('.maximize_title').innerHTML)
-})
-
 // Maximizar las imagenes
 function hover_user_title_delete_down_max (user, title, url, gifCardAll, idGif) {
     let gifUser = document.createElement('p');
@@ -78,7 +73,7 @@ function hover_user_title_delete_down_max (user, title, url, gifCardAll, idGif) 
     user_title_test(user, title, gifUser, gifTitle)
 
     let favorite = document.createElement('div')
-    favorite.classList.add("favorite_normal")
+    favorite.classList.add("delete_normal")
     let download = document.createElement('div')
     download.classList.add("download_normal")
     let second_max = document.createElement('div')
@@ -118,7 +113,6 @@ function hover_user_title_delete_down_max (user, title, url, gifCardAll, idGif) 
     })
 
     favorite.addEventListener('click', () => {
-        console.log(idGif)
         removeGif("misgifos", idGif)
     })
 }
@@ -132,20 +126,6 @@ async function download_gif (url_gif, title_gif) {
     a.href = window.URL.createObjectURL(file);
     a.click()
 }
-
-// Dark Mode
-document.querySelector('.button_dark').addEventListener("click", () => {
-    document.body.classList.toggle('dark')
-    if ( document.body.classList[0]){
-        localStorage.setItem('body', 'dark');
-        document.querySelector('#close-dark').classList.remove('displaynone')
-        document.querySelector('#close').classList.add('displaynone')
-    }else{
-        localStorage.removeItem('body');
-        document.querySelector('#close-dark').classList.add('displaynone')
-        document.querySelector('#close').classList.remove('displaynone')
-    }
-})
 
 // Remueve los gif
 function removeAll () {
@@ -164,8 +144,16 @@ if (miGifs_list.length > 0) {
     document.querySelector('#misGifos_nocontent_title').classList.remove('displaynone')
 }
 
-
-
-//window.localStorage.removeItem('misgif')
-
-
+// // Dark Mode
+// document.querySelector('.button_dark').addEventListener("click", () => {
+//     document.body.classList.toggle('dark')
+//     if ( document.body.classList[0]){
+//         localStorage.setItem('body', 'dark');
+//         document.querySelector('#close-dark').classList.remove('displaynone')
+//         document.querySelector('#close').classList.add('displaynone')
+//     }else{
+//         localStorage.removeItem('body');
+//         document.querySelector('#close-dark').classList.add('displaynone')
+//         document.querySelector('#close').classList.remove('displaynone')
+//     }
+// })

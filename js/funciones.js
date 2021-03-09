@@ -131,6 +131,30 @@ async function download_gif (url_gif, title_gif) {
     a.click()
 }
 
+// // Dark Mode
+// document.querySelector('.button_dark').addEventListener("click", () => {
+//     document.body.classList.toggle('dark')
+//     if ( document.body.classList[0]){
+//         localStorage.setItem('body', 'dark');
+//     }else{
+//         localStorage.removeItem('body');
+//     }
+// })
+
+// Dark Mode
+document.querySelector('.button_dark').addEventListener("click", () => {
+    document.body.classList.toggle('dark')
+    if ( document.body.classList[0]){
+        localStorage.setItem('body', 'dark');
+        document.querySelector('#close-dark').classList.remove('displaynone')
+        document.querySelector('#close').classList.add('displaynone')
+    }else{
+        localStorage.removeItem('body');
+        document.querySelector('#close-dark').classList.add('displaynone')
+        document.querySelector('#close').classList.remove('displaynone')
+    }
+})
+
 // Verifica el modo Dark
 function body_dark () {
     const dark = localStorage.getItem("body");

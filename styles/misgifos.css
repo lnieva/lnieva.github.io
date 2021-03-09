@@ -4,7 +4,7 @@
     flex-direction: column;
     align-items: center;
     width: 100%;
-    top: 10px;
+    top: 60px;
     z-index: -1;
 }
 
@@ -16,7 +16,7 @@
 
 #misGifos_nocontent_img_title {
     position: relative;
-    top: 111px;
+    top: 40px;
     margin-bottom: 136px;
 }
 
@@ -35,10 +35,7 @@
 #misGifos_nocontent_title {
     position: relative;
     top: 40px;
-}
-
-#misGifos_nocontent_title {
-    font-size: 22px;
+    font-size: 20px;
     color: #50E3C2;
     line-height: 25px;
 }
@@ -53,13 +50,13 @@
     z-index: -1;
 }
 
-.favorite_normal, .download_normal, .max_normal, .favorite_hover, .download_hover, .max_hover{
+.favorite_normal, .download_normal, .max_normal, .favorite_hover, .download_hover, .max_hover, .delete_normal{
     display: block;
     position: absolute;
     background-repeat: no-repeat;
-    background-size: 18px 16px;
-    width: 16px;
-    height: 16px;
+    background-size: 25px;
+    width: 25px;
+    height: 25px;
     margin: 0;
     padding: 0;
     z-index: 2;
@@ -76,7 +73,7 @@
     z-index: 1;
 }
 
-#gifUser, #gifTitle, .favorite_normal, .download_normal, .max_normal {
+#gifUser, #gifTitle, .favorite_normal, .download_normal, .max_normal, .detele_normal {
     display: none;
 }
 
@@ -109,44 +106,51 @@
 }
 
 .container_gif:hover .favorite_normal {
+    background-image: url('/icons/icon-fav.svg');
+    display: block;
+    right: 100px;
+}
+
+.container_gif:hover .delete_normal {
     background-image: url('/icons/icon-trash-normal.svg');
     display: block;
-    right: 95px;
+    right: 100px;
 }
 
 .container_gif:hover .download_normal {
     background-image: url('/icons/icon-download.svg');
     display: block;
-    right: 70px;
+    right: 65px;
 }
 
 .container_gif:hover .max_normal {
     background-image: url('/icons/icon-max-normal.svg');
     display: block;
-    right: 45px;
+    right: 30px;
 }
 
 .container_gif:hover > .favorite_normal:hover {
+    background-image: url('/icons/icon-fav-hover.svg');
+    display: block;
+    right: 100px;
+}
+
+.container_gif:hover > .delete_normal:hover {
     background-image: url('/icons/icon-trash-hover.svg');
     display: block;
-    right: 95px;
+    right: 100px;
 }
 
 .container_gif:hover > .download_normal:hover {
     background-image: url('/icons/icon-download-hover.svg');
     display: block;
-    right: 70px;
+    right: 65px;
 }
 
 .container_gif:hover > .max_normal:hover {
     background-image: url('/icons/icon-max-hover.svg');
     display: block;
-    right: 45px;
-}
-
-.container_gif:hover #cuadro {
-    width: 260px;
-    height: 200px;
+    right: 30px;
 }
 
 .container_gif:hover #gifUser {
@@ -155,8 +159,146 @@
     height: 17px;
 }
 
-.container_gif:hover #gifTitle {
-    font-size: 16px;
-    width: 234px;
-    height: 40px;
+#footer {
+    top: 26px;
+}
+
+#gifos {
+    top:40px;
+}
+
+/* --------------------------------------------------- DESKTOP --------------------------------------------------------------*/
+
+@media screen and (min-width: 1000px){
+
+    #container_misGifos {
+        top: 10px;
+        z-index: -1;
+    }
+    
+    #icon_title_misGifos, #misGifos_nocontent_img_title {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    #misGifos_nocontent_img_title {
+        position: relative;
+        top: 111px;
+        margin-bottom: 136px;
+    }
+    
+    #title_misGifos {
+        font-size: 25px;
+        line-height: 30px;
+    }
+    
+    #misGifos_nocontent_title {
+        top: 40px;
+    }
+    
+    #misGifos_nocontent_title {
+        font-size: 22px;
+        line-height: 25px;
+    }
+    
+    #localgif {
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content:center;
+        width: 70%;
+        top: -60px;
+        z-index: -1;
+    }
+    
+    .favorite_normal, .download_normal, .max_normal, .favorite_hover, .download_hover, .max_hover, .delete_normal{
+        background-size: 32px;
+        width: 32px;
+        height: 32px;
+        margin: 0;
+        padding: 0;
+        z-index: 2;
+        top: 10px;
+    }
+    
+    .container_gif:hover #cuadro {
+        width: 156px;
+        height: 120px;
+        top: 0;
+    }
+
+    .container_gif:hover #gifUser {
+        font-size: 15px;
+        margin: 0;
+        top: 50%;
+        left: 10px;
+        width: 96px;
+        height: 17px;
+    }
+    
+    .container_gif:hover #gifTitle {
+        font-size: 8px;
+        margin: 0;
+        width: 130px;
+        top: 65%;
+        left: 10px;
+    }
+    
+    .container_gif:hover .favorite_normal {
+        right: 125px;
+    }
+    
+    .container_gif:hover .delete_normal {
+        right: 125px;
+    }
+    
+    .container_gif:hover .download_normal {
+        right: 85px;
+    }
+    
+    .container_gif:hover .max_normal {
+        right: 45px;
+    }
+    
+    .container_gif:hover > .favorite_normal:hover {
+        right: 125px;
+    }
+    
+    .container_gif:hover > .delete_normal:hover {
+        right: 125px;
+    }
+    
+    .container_gif:hover > .download_normal:hover {
+        right: 85px;
+    }
+    
+    .container_gif:hover > .max_normal:hover {
+        right: 45px;
+    }
+    
+    .container_gif:hover #cuadro {
+        width: 260px;
+        height: 200px;
+    }
+    
+    .container_gif:hover #gifUser {
+        font-size: 15px;
+        width: 96px;
+        height: 17px;
+    }
+    
+    .container_gif:hover #gifTitle {
+        font-size: 16px;
+        width: 234px;
+        height: 40px;
+    }
+
+    #gifos {
+        top:145px;
+    }
+
+    #footer {
+        top: 145px;
+    }
 }

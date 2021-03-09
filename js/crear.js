@@ -41,7 +41,7 @@ const container_video = document.querySelector('.container_video')
 const repeat_record = document.querySelector('.repeat')
 const btn_download = document.querySelector('#btn-download')
 const btn_link = document.querySelector('#btn-link')
-const viewGif_record = document.querySelector('.viewGif_record')
+
 
 const apiKey = "yTCjv2UMQEL7ayD0GnIrM7i1anyTY3Ov"
 
@@ -52,10 +52,10 @@ const video_course_upload_start = () => {
 }
 
 const video_course_upload_ok = () => {
-  img_video_upload.classList.add('displaynone')
-  text_video_upload.classList.add('displaynone')
   img_video_ok.classList.remove('displaynone')
   text_video_ok.classList.remove('displaynone')
+  img_video_upload.classList.add('displaynone')
+  text_video_upload.classList.add('displaynone')
 }
 
 const video_course_upload_close = () => {
@@ -111,12 +111,12 @@ const change_display_repeat = () => {
   btnFinish.classList.add('displaynone')
   title_crear_h2.classList.add('displaynone')
   title_crear_p2.classList.add('displaynone')
-  document.querySelector('.btnRecord').classList.add('displaynone')
+  btnRecord.classList.add('displaynone')
 }
 
 const time_repeat_disable = () => {
   document.querySelector('.time').classList.add('displaynone')
-  document.querySelector('.repeat').classList.remove('displaynone')
+  repeat_record.classList.remove('displaynone')
   document.querySelector('.repeat_line').classList.remove('displaynone')
 }
 
@@ -191,9 +191,11 @@ const loadGif = (idGif) => {
       btn_link.classList.remove('displaynone')
       url_gif_upload = response.data.images.original.url
       getStream("pause")
-      viewGif_record.classList.remove('displaynone')
+      const viewGif_record = document.createElement('img')
+      viewGif_record.classList.add('viewGif_record')
       viewGif_record.src = url_gif_upload
       // Download Gif
+      video.after(viewGif_record)
       btn_download.addEventListener('click', () => {
         download_gif(url_gif_upload, "myGif")
       })

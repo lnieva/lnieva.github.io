@@ -245,17 +245,17 @@ document.querySelector('.button_view__img_noct').addEventListener("click", () =>
 })
 
 
-// Dark Mode
-document.querySelector('.button_dark').addEventListener("click", () => {
-    document.body.classList.toggle('dark')
-    if ( document.body.classList[0]){
-        localStorage.setItem('body', 'dark');
-        document.querySelector('#close-dark').classList.remove('displaynone')
-        document.querySelector('#close').classList.add('displaynone')
-    }else{
-        localStorage.removeItem('body');
-        document.querySelector('#close-dark').classList.add('displaynone')
-        document.querySelector('#close').classList.remove('displaynone')
-    }
-})
+// // Dark Mode
+// document.querySelector('.button_dark').addEventListener("click", () => {
+//     document.body.classList.toggle('dark')
+//     if ( document.body.classList[0]){
+//         localStorage.setItem('body', 'dark');
+//         document.querySelector('#close-dark').classList.remove('displaynone')
+//         document.querySelector('#close').classList.add('displaynone')
+//     }else{
+//         localStorage.removeItem('body');
+//         document.querySelector('#close-dark').classList.add('displaynone')
+//         document.querySelector('#close').classList.remove('displaynone')
+//     }
+// })
 

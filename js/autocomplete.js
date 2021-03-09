@@ -1,4 +1,4 @@
-const autocomplete = `https://api.giphy.com/v1/gifs/search/tags?`
+const autocomplete = "https://api.giphy.com/v1/gifs/search/tags?"
 
 const form_Search = document.querySelector('.form_Search')
 const input_Search = document.querySelector('.form_Search > input')
