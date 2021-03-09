@@ -13,9 +13,14 @@ body {
     height:0;
 }
 
-#line {
+#line, #line-botton {
     height: 5px;
     background: #572EE5;
+}
+
+#line-botton {
+    position: relative;
+    top: 21px;
 }
 
 header {
@@ -750,6 +755,10 @@ header nav .menu ul li a {
 @media screen and (min-width: 1000px){
 
     /*--------------------------MENU ---------------------------------------------------*/
+
+    #line-botton {
+        top: 140px;
+    }
 
     header {
         margin-left: 10px;

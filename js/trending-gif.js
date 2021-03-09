@@ -21,6 +21,10 @@ fetch(`${trendingEndpoint}${apiKey}`)
         }
 
     })
+    .catch(error => {
+        console.error(error)
+        alert(`Hay un problema para visualizar los Trendings`)
+    })
 
 // ------ BOTONES SLIDER ------
 document.querySelector('#slider-right').addEventListener("click", () => {

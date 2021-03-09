@@ -131,16 +131,6 @@ async function download_gif (url_gif, title_gif) {
     a.click()
 }
 
-// // Dark Mode
-// document.querySelector('.button_dark').addEventListener("click", () => {
-//     document.body.classList.toggle('dark')
-//     if ( document.body.classList[0]){
-//         localStorage.setItem('body', 'dark');
-//     }else{
-//         localStorage.removeItem('body');
-//     }
-// })
-
 // Dark Mode
 document.querySelector('.button_dark').addEventListener("click", () => {
     document.body.classList.toggle('dark')

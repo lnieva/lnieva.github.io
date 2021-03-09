@@ -15,7 +15,11 @@ fetch(`${urltrending}${apiKey}`)
             paragraph.appendChild(item)
         })
 
-})
+    })
+    .catch(error => {
+        console.error(error)
+        alert(`Hay un problema para visualizar los 5 Trendings`)
+    })
 
 function updateValue(val, event) {
     document.getElementById("intro").value = val;

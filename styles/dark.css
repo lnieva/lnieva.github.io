@@ -75,7 +75,7 @@
     background: white;
 }
 
-.dark .paso_1, .dark .paso_2, .dark .paso_3, .dark .btnStart, .dark .btnRecord {
+.dark .paso_1, .dark .paso_2, .dark .paso_3, .dark .btnStart, .dark .btnRecord, .dark .btnUpload, .dark .btnFinish {
     color: white;
     border: 1px solid white;
 }
