@@ -107,6 +107,7 @@ function search_gifos () {
             favorite.classList.toggle('favorite_add')
             favorite.classList.toggle('favorite_normal')
             favoriteGifos.push(id)
+            //Crea un nuevo array y borra si hay ID repetidos
             let result = favoriteGifos.filter((item,index)=>{
                 return favoriteGifos.indexOf(item) === index;
               })
@@ -262,6 +263,3 @@ document.querySelector('.button_view__img').addEventListener("click", () => {
 document.querySelector('.button_view__img_noct').addEventListener("click", () => {
     search_gifos()
 })
-
-//localStorage.removeItem('favoriteGifos')
-//window.localStorage.setItem('favoriteGifos', '[]')

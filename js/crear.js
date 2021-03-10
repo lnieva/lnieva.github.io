@@ -1,8 +1,20 @@
-window.addEventListener('resize', function() {
-	if (window.innerWidth <= 1070) {
-		window.location.href = "../index.html"; 
-	}
-});
+// window.addEventListener('resize', function() {
+// 	if (window.innerWidth <= 1070) {
+// 		window.location.href = "../index.html"; 
+// 	}
+// });
+
+// Verifica el modo Dark
+function body_dark () {
+  const dark = localStorage.getItem("body");
+  if (dark === "dark") {
+          document.body.classList.add('dark')
+          document.querySelector('#burger-dark').classList.remove('displaynone')
+  }else{
+      document.body.classList.remove('dark')
+  }
+}
+body_dark()
 
 // Dark Mode
 document.querySelector('.button_dark').addEventListener("click", () => {
@@ -292,5 +304,3 @@ repeat_record.addEventListener('click', () => {
   getStream("play")
   change_display_repeat()
 })
-
-//window.localStorage.removeItem('misgifos')

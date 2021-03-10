@@ -133,6 +133,7 @@ function hover_user_title_fav_down_max (user, title, url, gifCardAll, gifId) {
         favorite.classList.add('favorite_add')
         favorite.classList.remove('favorite_normal')
         favoriteGifos.push(gifId)
+        //Crea un nuevo array y borra si hay ID repetidos
         let result = favoriteGifos.filter((item,index)=>{
             return favoriteGifos.indexOf(item) === index;
           })

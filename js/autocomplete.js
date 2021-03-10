@@ -58,6 +58,4 @@ function autocomplete_updateValue(val, event) {
   search_gifos()
   icon_search_close()
   search_Autocomplete.innerHTML = ''
-  //searchmenu__height.style.height = "50px"
 }
-

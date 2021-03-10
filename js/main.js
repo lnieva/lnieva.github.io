@@ -14,6 +14,3 @@ checkburger.addEventListener("click",
         document.getElementById("close-dark").classList.toggle('displaynone');
     }
 });
-
-
-
