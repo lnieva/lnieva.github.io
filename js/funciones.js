@@ -1,8 +1,15 @@
 // ------ VARIABLES ------
-
 const apiKey = "yTCjv2UMQEL7ayD0GnIrM7i1anyTY3Ov"
 const urltrending = "https://api.giphy.com/v1/trending/searches?api_key="
 const randomGif = `https://api.giphy.com/v1/gifs/random?api_key=${apiKey}&tag=`
+
+let favoriteGifos = []
+
+// Datos locales
+let miGifs_list = JSON.parse(localStorage.getItem('misgifos'))
+let favoriteGifs_list = JSON.parse(localStorage.getItem('favoriteGifos'))
+favoriteGifos = favoriteGifs_list
+
 
 // Remueve los gif
 function removeAll () {
@@ -83,6 +90,7 @@ function hover_user_title_fav_down_max (user, title, url, gifCardAll) {
 
     let favorite = document.createElement('div')
     favorite.classList.add("favorite_normal")
+    favorite.setAttribute('id', 'type_class')
     let download = document.createElement('div')
     download.classList.add("download_normal")
     let second_max = document.createElement('div')
@@ -119,6 +127,14 @@ function hover_user_title_fav_down_max (user, title, url, gifCardAll) {
     download.addEventListener("click", () => {
         download_gif(url, title)
     })
+
+    favorite.addEventListener("click",() => {
+        document.querySelector('#type_class').classList.remove('favorite_normal')
+        document.querySelector('#type_class').classList.add('favorite_add')
+        favoriteGifos.push(id)
+        window.localStorage.setItem('favoriteGifos', JSON.stringify(favoriteGifos))
+    })
+
 }
 
 // Click download Gif

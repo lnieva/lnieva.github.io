@@ -571,8 +571,17 @@ header nav .menu ul li a {
     z-index: 2;
 }
 
-.favorite_normal, .download_normal, .max_normal, .favorite_hover, .download_hover, .max_hover{
-    display: block;
+.favorite_add {
+    display: none;
+    background: #FFFFFF;
+    background-size: 25px;
+    background-position: center;
+    border-radius: 6px;
+    width: 32px;
+    height: 32px;
+}
+
+.favorite_normal, .download_normal, .max_normal {
     position: absolute;
     background-repeat: no-repeat;
     background-size: 18px 16px;
@@ -585,51 +594,45 @@ header nav .menu ul li a {
 }
 
 .container_gif:hover .favorite_normal {
+    display: block;
     background-image: url('/icons/icon-fav.svg');
     right: 75px;
 }
 
 .container_gif:hover .download_normal {
+    display: block;
     background-image: url('/icons/icon-download.svg');
     right: 50px;
 }
 
 .container_gif:hover .max_normal {
+    display: block;
     background-image: url('/icons/icon-max-normal.svg');
     right: 25px;
 }
 
 .container_gif:hover > .favorite_normal:hover {
+    display: block;
     background-image: url('/icons/icon-fav-hover.svg');
     right: 75px;
 }
 
 .container_gif:hover > .download_normal:hover {
+    display: block;
     background-image: url('/icons/icon-download-hover.svg');
     right: 50px;
 }
 
 .container_gif:hover > .max_normal:hover {
+    display: block;
     background-image: url('/icons/icon-max-hover.svg');
     right: 25px;
 }
 
-.favorite_add {
-    position: absolute;
-    opacity: 0.7;
-    background: #FFFFFF;
-    background-image: url('/icons/icon-fav-active.svg');
-    background-repeat: no-repeat;
-    background-size: 11px 9px;
-    background-position: center;
-    width: 16px;
-    height: 16px;
-    margin: 0;
-    padding: 0;
-    z-index: 2;
-    top: 10px;
-    right: 75px;
-    border-radius: 3px;
+.container_gif:hover .favorite_add {
+    display: block;
+    background-image: url('/icons/icon-fav-active.jpg');
+    right: 50px;
 }
 
 /* --------------------------------- GIFOS ------------------------------------------ */
@@ -924,7 +927,7 @@ header nav .menu ul li a {
 
     #title-search-ok {
         font-size: 55px;
-        line-height: 30px;
+        line-height: 50px;
         width: 550px;
         height: 30px;
         margin-top: 20px;
@@ -959,8 +962,7 @@ header nav .menu ul li a {
         height: 40px;
     }
 
-    .favorite_normal, .download_normal, .max_normal, .favorite_hover, .download_hover, .max_hover{
-        display: block;
+    .favorite_normal, .download_normal, .max_normal{
         position: absolute;
         background-repeat: no-repeat;
         background-size: 32px;
@@ -994,6 +996,10 @@ header nav .menu ul li a {
 
     .container_gif:hover > .max_normal:hover {
         right: 40px;
+    }
+
+    .container_gif:hover .favorite_add {
+        right: 125px;
     }
 
     /*--------------------------------- SEARCH -------------------------------------*/

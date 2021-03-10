@@ -32,7 +32,7 @@ function search_gifos () {
             promiseList.push(gifPush)
 
     let createImg = document.querySelector(".result-search")
-    const showGif = (user, title, url) => {
+    const showGif = (user, title, url, id) => {
         let gifCard = document.createElement('div')
         let lineSearch = document.getElementById("line-result")
         lineSearch.style.display = "flex"
@@ -54,6 +54,7 @@ function search_gifos () {
 
         let favorite = document.createElement('div')
         favorite.classList.add("favorite_normal")
+        favorite.setAttribute('id', 'type_class')
         let download = document.createElement('div')
         download.classList.add("download_normal")
 
@@ -96,11 +97,15 @@ function search_gifos () {
         download.addEventListener("click", () => {
             download_gif(url, title)
         })
-
+    
+        favorite.addEventListener("click",() => {
+            favorite.classList.toggle('favorite_add')
+            favoriteGifos.push(id)
+            window.localStorage.setItem('favoriteGifos', JSON.stringify(favoriteGifos))
+        })
+        
         createImg.appendChild(gifCard)
-
         button_view_active()
-
     }
 
     Promise.all(promiseList)
@@ -112,10 +117,11 @@ function search_gifos () {
                 if ( cant <= 48 ) {
                     const data = numbers.slice(0,12)
                         data.forEach(gif => {
+                        const id = response[0].data[gif].id
                         const user = response[0].data[gif].username
                         const title = response[0].data[gif].title
                         const url = response[0].data[gif].images.original.url
-                        showGif(user, title, url)
+                        showGif(user, title, url, id)
                         })
                 }else{
                     alert('El limite de busqueda son 48 Gif')
@@ -244,18 +250,5 @@ document.querySelector('.button_view__img_noct').addEventListener("click", () =>
     search_gifos()
 })
 
-
-// // Dark Mode
-// document.querySelector('.button_dark').addEventListener("click", () => {
-//     document.body.classList.toggle('dark')
-//     if ( document.body.classList[0]){
-//         localStorage.setItem('body', 'dark');
-//         document.querySelector('#close-dark').classList.remove('displaynone')
-//         document.querySelector('#close').classList.add('displaynone')
-//     }else{
-//         localStorage.removeItem('body');
-//         document.querySelector('#close-dark').classList.add('displaynone')
-//         document.querySelector('#close').classList.remove('displaynone')
-//     }
-// })
-
+//localStorage.removeItem('favoriteGifos')
+//window.localStorage.setItem('favoriteGifos', '[]')

@@ -1,10 +1,10 @@
 const fullGif = document.querySelector('.fullGif')
 
-let miGifs_list = JSON.parse(localStorage.getItem('misgifos'))
+const page = document.querySelector('#title_misGifos').innerHTML
 
-const loadGif = () => {
-    for (let i=0; i < miGifs_list.length; i++) {
-    fetch(`https://api.giphy.com/v1/gifs/${miGifs_list[i]}?api_key=${apiKey}`)
+const loadGif = (list_localstorage, item_localstorage, type_class) => {
+    for (let i=0; i < list_localstorage.length; i++) {
+    fetch(`https://api.giphy.com/v1/gifs/${list_localstorage[i]}?api_key=${apiKey}`)
       .then(response => response.json())
       .then( response => {
             let imgGif = response.data.images.original.url
@@ -19,22 +19,30 @@ const loadGif = () => {
             createImg.appendChild(gifCard)
             gifCard.appendChild(box)
 
-            hover_user_title_delete_down_max(user, title, imgGif, gifCard, miGifs_list[i])
-        })  
+            hover_user_title_delete_down_max(user, title, imgGif, gifCard, list_localstorage[i], type_class, list_localstorage, item_localstorage)
+        })
+        .catch(error => {
+            document.querySelector('#misGifos_nocontent_img').classList.remove('displaynone')
+            document.querySelector('#misGifos_nocontent_title').classList.remove('displaynone')
+        }) 
     }
 }
 
 // Remove Gif
-const removeGif = (array ,idGif) => {
-    let myGifIndex = miGifs_list.indexOf(idGif);
-    miGifs_list.splice(myGifIndex, 1)
-    localStorage.setItem(array, JSON.stringify(miGifs_list))
+const removeGif = (list_localstorage ,idGif, item_localstorage, type_class) => {
+    let myGifIndex = list_localstorage.indexOf(idGif);
+    list_localstorage.splice(myGifIndex, 1)
+    localStorage.setItem(item_localstorage, JSON.stringify(list_localstorage))
 
-    if (miGifs_list.length > 0) {
+    if (list_localstorage.length > 0) {
         document.querySelector('#misGifos_nocontent_img').classList.add('displaynone')
         document.querySelector('#misGifos_nocontent_title').classList.add('displaynone')
         removeAll()
-        loadGif() 
+        if (page == "Favoritos") {
+            loadGif(favoriteGifs_list, "favoriteGifos", "favorite_normal") 
+        }else{
+            loadGif(miGifs_list, "misgifos", "delete_normal") 
+        }
     }else {
         document.querySelector('#misGifos_nocontent_img').classList.remove('displaynone')
         document.querySelector('#misGifos_nocontent_title').classList.remove('displaynone')
@@ -62,7 +70,8 @@ document.querySelector('.fullGif__close-dark').addEventListener('click', () => {
 })
 
 // Maximizar las imagenes
-function hover_user_title_delete_down_max (user, title, url, gifCardAll, idGif) {
+function hover_user_title_delete_down_max (user, title, url, gifCardAll, idGif, type_class, list_localstorage, item_localstorage) {
+    let class_check = type_class;
     let gifUser = document.createElement('p');
     let gifTitle = document.createElement('p');
     let cuadro = document.createElement('div');
@@ -73,7 +82,8 @@ function hover_user_title_delete_down_max (user, title, url, gifCardAll, idGif) 
     user_title_test(user, title, gifUser, gifTitle)
 
     let favorite = document.createElement('div')
-    favorite.classList.add("delete_normal")
+    favorite.classList.add(class_check)
+    favorite.setAttribute('id', 'type_class')
     let download = document.createElement('div')
     download.classList.add("download_normal")
     let second_max = document.createElement('div')
@@ -113,7 +123,8 @@ function hover_user_title_delete_down_max (user, title, url, gifCardAll, idGif) 
     })
 
     favorite.addEventListener('click', () => {
-        removeGif("misgifos", idGif)
+        favorite.classList.toggle('favorite_add')
+        removeGif(list_localstorage, idGif, item_localstorage)
     })
 }
 
@@ -135,25 +146,22 @@ function removeAll () {
     }
 }
 
-if (miGifs_list.length > 0) {
-    document.querySelector('#misGifos_nocontent_img').classList.add('displaynone')
-    document.querySelector('#misGifos_nocontent_title').classList.add('displaynone')
-    loadGif()   
-}else {
-    document.querySelector('#misGifos_nocontent_img').classList.remove('displaynone')
-    document.querySelector('#misGifos_nocontent_title').classList.remove('displaynone')
+if (page == "Favoritos") {
+    if (favoriteGifs_list.length > 0) {
+        document.querySelector('#misGifos_nocontent_img').classList.add('displaynone')
+        document.querySelector('#misGifos_nocontent_title').classList.add('displaynone')
+        loadGif(favoriteGifs_list, "favoriteGifos", "favorite_normal")   
+    }else {
+        document.querySelector('#misGifos_nocontent_img').classList.remove('displaynone')
+        document.querySelector('#misGifos_nocontent_title').classList.remove('displaynone')
+    }  
+}else{
+    if (miGifs_list.length > 0) {
+        document.querySelector('#misGifos_nocontent_img').classList.add('displaynone')
+        document.querySelector('#misGifos_nocontent_title').classList.add('displaynone')
+        loadGif(miGifs_list, "misgifos", "delete_normal")   
+    }else {
+        document.querySelector('#misGifos_nocontent_img').classList.remove('displaynone')
+        document.querySelector('#misGifos_nocontent_title').classList.remove('displaynone')
+    }
 }
-
-// // Dark Mode
-// document.querySelector('.button_dark').addEventListener("click", () => {
-//     document.body.classList.toggle('dark')
-//     if ( document.body.classList[0]){
-//         localStorage.setItem('body', 'dark');
-//         document.querySelector('#close-dark').classList.remove('displaynone')
-//         document.querySelector('#close').classList.add('displaynone')
-//     }else{
-//         localStorage.removeItem('body');
-//         document.querySelector('#close-dark').classList.add('displaynone')
-//         document.querySelector('#close').classList.remove('displaynone')
-//     }
-// })
