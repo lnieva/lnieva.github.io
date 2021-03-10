@@ -346,10 +346,11 @@ header nav .menu ul li a {
 .maximize_icon_fav_add {
     background-size: 32px;
     background-position: center;
-    border-radius: 12px;
+    border-radius: 10px;
     width: 36px;
     height: 36px;     
-    margin-right: 20px;
+    margin-right: 5px;
+    border: 1px solid #572EE5;
 }
 
 .maximize_icon_fav, .maximize_icon_download {
@@ -383,6 +384,7 @@ header nav .menu ul li a {
 .maximize_icon_fav {
     background-image: url('../icons/icon-fav.svg');
     background-repeat: no-repeat;
+    background-position: center;
 }
 
 .maximize_icon_fav_add {
