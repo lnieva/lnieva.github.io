@@ -91,6 +91,11 @@ function search_gifos () {
             content.before(maximize_img)
             maximize_user_title.appendChild(maximize_user)
             maximize_user_title.appendChild(maximize_title)
+
+            document.querySelector('.maximize_icon_fav').addEventListener("click", () => {
+                document.querySelector('#type_class_max').classList.remove('maximize_icon_fav')
+                document.querySelector('#type_class_max').classList.add('maximize_icon_fav_add')
+            })
         })
 
         //Download desde el hover
@@ -100,8 +105,12 @@ function search_gifos () {
     
         favorite.addEventListener("click",() => {
             favorite.classList.toggle('favorite_add')
+            favorite.classList.toggle('favorite_normal')
             favoriteGifos.push(id)
-            window.localStorage.setItem('favoriteGifos', JSON.stringify(favoriteGifos))
+            let result = favoriteGifos.filter((item,index)=>{
+                return favoriteGifos.indexOf(item) === index;
+              })
+            window.localStorage.setItem('favoriteGifos', JSON.stringify(result))
         })
         
         createImg.appendChild(gifCard)
@@ -225,6 +234,8 @@ fullGifClose.addEventListener('click', () => {
     document.querySelector('.maximize_title').remove()
     fullGif.classList.remove('show')
     document.querySelector('#gifos').classList.remove('displaynone')
+    document.querySelector('#type_class_max').classList.remove('maximize_icon_fav_add')
+    document.querySelector('#type_class_max').classList.add('maximize_icon_fav')
 })
 
 // Cierra las imagenes maximizadas Dark
@@ -234,6 +245,8 @@ document.querySelector('.fullGif__close-dark').addEventListener('click', () => {
     document.querySelector('.maximize_title').remove()
     fullGif.classList.remove('show')
     document.querySelector('#gifos').classList.remove('displaynone')
+    document.querySelector('#type_class_max').classList.remove('maximize_icon_fav_add')
+    document.querySelector('#type_class_max').classList.add('maximize_icon_fav')
 })
 
 // Click Download Search/trendings

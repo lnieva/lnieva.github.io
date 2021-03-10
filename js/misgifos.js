@@ -9,7 +9,7 @@ const loadGif = (list_localstorage, item_localstorage, type_class) => {
       .then( response => {
             let imgGif = response.data.images.original.url
             const user = response.data.username
-            const title = `Acamica - ${i}`
+            const title = response.data.title
             let createImg = document.getElementById("localgif")
             let gifCard = document.createElement('div')
             gifCard.classList.add('container_gif')
@@ -39,7 +39,7 @@ const removeGif = (list_localstorage ,idGif, item_localstorage, type_class) => {
         document.querySelector('#misGifos_nocontent_title').classList.add('displaynone')
         removeAll()
         if (page == "Favoritos") {
-            loadGif(favoriteGifs_list, "favoriteGifos", "favorite_normal") 
+            loadGif(favoriteGifs_list, "favoriteGifos", "favorite_add") 
         }else{
             loadGif(miGifs_list, "misgifos", "delete_normal") 
         }
@@ -150,7 +150,7 @@ if (page == "Favoritos") {
     if (favoriteGifs_list.length > 0) {
         document.querySelector('#misGifos_nocontent_img').classList.add('displaynone')
         document.querySelector('#misGifos_nocontent_title').classList.add('displaynone')
-        loadGif(favoriteGifs_list, "favoriteGifos", "favorite_normal")   
+        loadGif(favoriteGifs_list, "favoriteGifos", "favorite_add")
     }else {
         document.querySelector('#misGifos_nocontent_img').classList.remove('displaynone')
         document.querySelector('#misGifos_nocontent_title').classList.remove('displaynone')

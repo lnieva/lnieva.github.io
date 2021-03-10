@@ -14,7 +14,6 @@ document.querySelector('.button_dark').addEventListener("click", () => {
     }
 })
 
-let favoriteGifos = []
 let misGifos = []
 
 if (window.localStorage.getItem('misgifos')) {

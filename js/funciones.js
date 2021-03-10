@@ -8,8 +8,8 @@ let favoriteGifos = []
 // Datos locales
 let miGifs_list = JSON.parse(localStorage.getItem('misgifos'))
 let favoriteGifs_list = JSON.parse(localStorage.getItem('favoriteGifos'))
-favoriteGifos = favoriteGifs_list
 
+favoriteGifos = favoriteGifs_list
 
 // Remueve los gif
 function removeAll () {
@@ -78,7 +78,7 @@ function user_title_test (user_test, title_test, user_var, title_var) {
 }
 
 // Maximizar las imagenes
-function hover_user_title_fav_down_max (user, title, url, gifCardAll) {
+function hover_user_title_fav_down_max (user, title, url, gifCardAll, gifId) {
     let gifUser = document.createElement('p');
     let gifTitle = document.createElement('p');
     let cuadro = document.createElement('div');
@@ -124,17 +124,22 @@ function hover_user_title_fav_down_max (user, title, url, gifCardAll) {
 
         document.querySelector('#gifos').classList.add('displaynone')
     })
+
     download.addEventListener("click", () => {
         download_gif(url, title)
     })
 
     favorite.addEventListener("click",() => {
-        document.querySelector('#type_class').classList.remove('favorite_normal')
-        document.querySelector('#type_class').classList.add('favorite_add')
-        favoriteGifos.push(id)
-        window.localStorage.setItem('favoriteGifos', JSON.stringify(favoriteGifos))
+        favorite.classList.add('favorite_add')
+        favorite.classList.remove('favorite_normal')
+        favoriteGifos.push(gifId)
+        let result = favoriteGifos.filter((item,index)=>{
+            return favoriteGifos.indexOf(item) === index;
+          })
+        window.localStorage.setItem('favoriteGifos', JSON.stringify(result))
+        //removeAll ()
+        //loadGif(favoriteGifs_list, "favoriteGifos", "favorite_add")
     })
-
 }
 
 // Click download Gif

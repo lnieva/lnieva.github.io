@@ -318,6 +318,11 @@ header nav .menu ul li a {
     z-index: 2;
 }
 
+.fullGif__close-dark {
+    display: none;
+    cursor: pointer;
+}
+
 .content_img {
     width: 318px;
     height: 245px;
@@ -336,6 +341,15 @@ header nav .menu ul li a {
     color: #000000;
     text-align: left;
     margin: 0;
+}
+
+.maximize_icon_fav_add {
+    background-size: 32px;
+    background-position: center;
+    border-radius: 12px;
+    width: 36px;
+    height: 36px;     
+    margin-right: 20px;
 }
 
 .maximize_icon_fav, .maximize_icon_download {
@@ -366,9 +380,32 @@ header nav .menu ul li a {
     width: 50%;
 }
 
-.maximize_icon_fav:hover, .maximize_icon_download:hover {
-    border: 2px solid #CED7E1;
+.maximize_icon_fav {
+    background-image: url('../icons/icon-fav.svg');
+    background-repeat: no-repeat;
 }
+
+.maximize_icon_fav_add {
+    background-image: url('../icons/icon-fav-active.jpg');
+    background-repeat: no-repeat;
+}
+
+.maximize_icon_download{
+    background-repeat: no-repeat;
+    background-image: url('../icons/icon-download.svg');
+}
+
+.maximize_icon_fav:hover {
+    background-image: url('../icons/icon-fav-hover.svg')
+}
+
+.maximize_icon_download:hover {
+    background-image: url('../icons/icon-download-hover.svg')
+}
+
+/* .maximize_icon_fav:hover, .maximize_icon_download:hover {
+    border: 2px solid #CED7E1;
+} */
 
 .button_view {
     position: relative;
@@ -572,21 +609,24 @@ header nav .menu ul li a {
 }
 
 .favorite_add {
+    position: absolute;
     display: none;
     background: #FFFFFF;
-    background-size: 25px;
+    background-size: 16px;
     background-position: center;
     border-radius: 6px;
-    width: 32px;
-    height: 32px;
+    width: 18px;
+    height: 18px;
+    z-index: 2;
+    top: 10px;
 }
 
 .favorite_normal, .download_normal, .max_normal {
     position: absolute;
     background-repeat: no-repeat;
-    background-size: 18px 16px;
-    width: 16px;
-    height: 16px;
+    background-size: 18px;
+    width: 18px;
+    height: 18px;
     margin: 0;
     padding: 0;
     z-index: 2;
@@ -632,7 +672,7 @@ header nav .menu ul li a {
 .container_gif:hover .favorite_add {
     display: block;
     background-image: url('/icons/icon-fav-active.jpg');
-    right: 50px;
+    right: 75px;
 }
 
 /* --------------------------------- GIFOS ------------------------------------------ */
@@ -962,6 +1002,13 @@ header nav .menu ul li a {
         height: 40px;
     }
 
+    .favorite_add {
+        background-size: 25px;
+        width: 32px;
+        height: 32px;
+
+    }
+
     .favorite_normal, .download_normal, .max_normal{
         position: absolute;
         background-repeat: no-repeat;
@@ -1028,11 +1075,6 @@ header nav .menu ul li a {
     .fullGif__close {
         width: 15.8px;
         height: 15.8px;
-    }
-
-    .fullGif__close-dark {
-        display: none;
-        cursor: pointer;
     }
 
     .maximize_icon_fav, .maximize_icon_download {
