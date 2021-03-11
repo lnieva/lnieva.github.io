@@ -617,11 +617,11 @@ header nav .menu ul li a {
     background-size: 16px;
     background-position: center;
     border-radius: 6px;
-    width: 25px;
-    height: 25px;
+    width: 18px;
+    height: 18px;
     z-index: 2;
     top: 10px;
-    margin-right: 25px;
+    /* margin-right: 25px; */
 }
 
 .favorite_normal, .download_normal, .max_normal {

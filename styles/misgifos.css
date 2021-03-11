@@ -50,6 +50,12 @@
     z-index: -1;
 }
 
+.favorite_add {
+    width: 25px;
+    height: 25px;
+    margin-right: 25px;
+}
+
 .favorite_normal, .download_normal, .max_normal, .favorite_hover, .download_hover, .max_hover, .delete_normal{
     display: block;
     position: absolute;
