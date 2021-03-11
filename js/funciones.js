@@ -5,6 +5,18 @@ const randomGif = `https://api.giphy.com/v1/gifs/random?api_key=${apiKey}&tag=`
 
 let favoriteGifos = []
 
+if (localStorage.getItem('misgifos')){
+    console.info("Existe localstorage")
+}else{
+    localStorage.setItem('misgifos', '[]')
+}
+
+if (localStorage.getItem('favoriteGifos')){
+    console.info("Existe localstorage")
+}else{
+    localStorage.setItem('favoriteGifos', '[]')
+}
+
 // Datos locales
 let miGifs_list = JSON.parse(localStorage.getItem('misgifos'))
 let favoriteGifs_list = JSON.parse(localStorage.getItem('favoriteGifos'))
