@@ -617,10 +617,11 @@ header nav .menu ul li a {
     background-size: 16px;
     background-position: center;
     border-radius: 6px;
-    width: 18px;
-    height: 18px;
+    width: 25px;
+    height: 25px;
     z-index: 2;
     top: 10px;
+    margin-right: 25px;
 }
 
 .favorite_normal, .download_normal, .max_normal {
@@ -674,6 +675,7 @@ header nav .menu ul li a {
 .container_gif:hover .favorite_add {
     display: block;
     background-image: url('/icons/icon-fav-active.jpg');
+    background-repeat: no-repeat;
     right: 75px;
 }
 
