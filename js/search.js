@@ -199,6 +199,7 @@ document.getElementById("close-search").addEventListener("click", () => {
     search_Autocomplete__lupa_item.innerHTML = ''
     removeAll()
     button_view_disable()
+    document.getElementById("intro").value = ""
     let check_error = document.getElementsByClassName("display")
     for (let i=0; i < check_error.length; i++) {
         check_error[i].style.display = "none"
@@ -212,6 +213,7 @@ document.getElementById("close-search-dark").addEventListener("click", () => {
     search_Autocomplete__lupa_item.innerHTML = ''
     removeAll()
     button_view_disable()
+    document.getElementById("intro").value = ""
     let check_error = document.getElementsByClassName("display")
     for (let i=0; i < check_error.length; i++) {
         check_error[i].style.display = "none"
