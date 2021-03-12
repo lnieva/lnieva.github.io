@@ -49,6 +49,7 @@ container_lupa_item__lupa.addEventListener('submit', e => {
 
 input_Search.addEventListener('keyup', e => {
   searchSuggestions(input_Search.value)
+  icon_search_close()
 })
 
 // Seleccionamos uno de los nombres del autoplete
